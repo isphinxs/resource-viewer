@@ -15,6 +15,7 @@ class ResourcesController < ApplicationController
 
     def edit
         set_resource
+        # @category = self.categories.build
         @categories = Category.all
         @organizations = Organization.all
     end
@@ -36,6 +37,6 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-        params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, category_ids: [])
+        params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, category_ids: [], categories_attributes: [:name])
     end
 end
