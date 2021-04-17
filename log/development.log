@@ -4114,3 +4114,138 @@ Processing by OrganizationsController#show as HTML
 Completed 200 OK in 25ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 3064)
 
 
+Started GET "/categories" for ::1 at 2021-04-17 19:29:14 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 3320)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 4882)
+Completed 200 OK in 49ms (Views: 34.7ms | ActiveRecord: 3.0ms | Allocations: 7086)
+
+
+Started GET "/categories" for ::1 at 2021-04-17 19:29:51 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 2988)
+Completed 200 OK in 50ms (Views: 32.9ms | ActiveRecord: 1.3ms | Allocations: 4122)
+
+
+Started GET "/categories/new" for ::1 at 2021-04-17 19:32:02 -0400
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1832)
+Completed 200 OK in 28ms (Views: 8.7ms | ActiveRecord: 1.1ms | Allocations: 7303)
+
+
+Started GET "/categories/new" for ::1 at 2021-04-17 19:32:40 -0400
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 3.2ms | Allocations: 773)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1089)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2813)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 3944)
+
+
+Started POST "/categories" for ::1 at 2021-04-17 19:32:45 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"testing"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:17:in `create'
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testing"], ["created_at", "2021-04-17 23:32:45.817154"], ["updated_at", "2021-04-17 23:32:45.817154"]]
+  ↳ app/controllers/categories_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:17:in `create'
+Redirected to http://localhost:3000/categories/16
+Completed 302 Found in 22ms (ActiveRecord: 3.4ms | Allocations: 2521)
+
+
+Started GET "/categories/16" for ::1 at 2021-04-17 19:32:45 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:36:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 1700)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 2879)
+
+
+Started GET "/categories/16" for ::1 at 2021-04-17 19:33:43 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:36:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 1915)
+Completed 200 OK in 46ms (Views: 23.2ms | ActiveRecord: 0.3ms | Allocations: 3592)
+
+
+Started GET "/categories/16/edit" for ::1 at 2021-04-17 19:33:44 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 3.4ms | Allocations: 2234)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2551)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4110)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 4615)
+
+
+Started GET "/categories/16/edit" for ::1 at 2021-04-17 19:34:00 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:37:in `set_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:37:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 2.8ms | Allocations: 613)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 708)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2267)
+Completed 200 OK in 58ms (Views: 29.2ms | ActiveRecord: 3.4ms | Allocations: 7832)
+
+
+Started PATCH "/categories/16" for ::1 at 2021-04-17 19:34:34 -0400
+Processing by CategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"test"}, "commit"=>"Update Category", "id"=>"16"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:30:in `update'
+  [1m[36mCategory Update (1.5ms)[0m  [1m[33mUPDATE "categories" SET "name" = ?, "updated_at" = ? WHERE "categories"."id" = ?[0m  [["name", "test"], ["updated_at", "2021-04-17 23:34:34.404237"], ["id", 16]]
+  ↳ app/controllers/categories_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:30:in `update'
+Redirected to http://localhost:3000/categories/16
+Completed 302 Found in 31ms (ActiveRecord: 4.7ms | Allocations: 7572)
+
+
+Started GET "/categories/16" for ::1 at 2021-04-17 19:34:34 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1641)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 2713)
+
+
