@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <div>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Resources", resources_path %>
+      <%= link_to "Organizations", organizations_path %>
+      <%= link_to "Categories", categories_path %>
+    </div>
     <%= yield %>
   </body>
 </html>
