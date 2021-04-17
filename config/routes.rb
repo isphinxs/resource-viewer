@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :resources
   resources :organizations
   resources :categories
   resources :users
