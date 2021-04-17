@@ -1,4 +1,11 @@
 <h1>Category Show</h1>
 <p><%= @category.name %></p>
 
+<h2>Available Resources</h2>
+<ul>
+<% @category.resources.each do |resource| %>
+    <li><%= link_to resource.name, resource_path(resource) %></li>
+<% end %>
+</ul>
+
 <%= link_to "Edit Category", edit_category_path(@category) %>
