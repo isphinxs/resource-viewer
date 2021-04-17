@@ -15,7 +15,7 @@
 
     <div>
         <h3>Organization</h3>
-        <%= f.collection_select :organization_id, organizations, :id, :name %>
+        <%= f.collection_select :organization_id, organizations, :id, :name, include_hidden: false %>
         <br>
         <label for="resource_organization_name">New Organization</label>
         <%= f.fields_for :organization, resource.build_organization do |organization_fields| %>
@@ -26,7 +26,7 @@
 
     <div>
         <h3>Categories</h3>
-        <%= f.collection_check_boxes :category_ids, categories, :id, :name %>
+        <%= f.collection_check_boxes :category_ids, categories, :id, :name, include_hidden: false %>
         <br>
         <label for="resource_categories_name">New Category</label>
         <%= f.fields_for :categories, resource.categories.build do |categories_fields| %>

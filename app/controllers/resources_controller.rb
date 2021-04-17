@@ -31,7 +31,7 @@ class ResourcesController < ApplicationController
     end
 
     def update
-        byebug
+        # byebug
         set_resource
         @resource.update(resource_params)
         redirect_to resource_path(@resource)
