@@ -8,9 +8,19 @@ class ResourcesController < ApplicationController
     end
 
     def new
+        @resource = Resource.new
+        @categories = Category.all
+        @organizations = Organization.all
     end
     
     def create
+        @resource = Resource.new(resource_params)
+        if @resource.valid?
+            @resource.save
+            redirect_to resource_path(@resource)
+        else
+            render :new
+        end
     end
 
     def edit
