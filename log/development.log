@@ -367,3 +367,39 @@ Processing by OrganizationsController#index as HTML
 Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 2746)
 
 
+Started GET "/categories" for ::1 at 2021-04-17 15:02:09 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/categories/index.html.erb:3
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 4207)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 5935)
+Completed 200 OK in 52ms (Views: 38.9ms | ActiveRecord: 3.8ms | Allocations: 8528)
+
+
+Started GET "/categories/3" for ::1 at 2021-04-17 15:02:12 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:28:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 1700)
+Completed 200 OK in 32ms (Views: 23.5ms | ActiveRecord: 0.3ms | Allocations: 2864)
+
+
+Started GET "/categories" for ::1 at 2021-04-17 15:02:14 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2556)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 2947)
+
+
