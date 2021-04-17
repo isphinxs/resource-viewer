@@ -8,15 +8,27 @@ class OrganizationsController < ApplicationController
     end
 
     def new
+        @organization = Organization.new
     end
 
     def create
+        @organization = Organization.new(organization_params)
+        if @organization.valid?
+            @organization.save
+            redirect_to organization_path(@organization)
+        else
+            render :new
+        end
     end
 
     def edit
+        set_organization
     end
 
     def update
+        set_organization
+        @organization.update(organization_params)
+        redirect_to organization_path(@organization)
     end
     
     def destroy
@@ -26,5 +38,9 @@ class OrganizationsController < ApplicationController
 
     def set_organization
         @organization = Organization.find_by(id: params[:id])
+    end
+
+    def organization_params
+        params.require(:organization).permit(:name)
     end
 end
