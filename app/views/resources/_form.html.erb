@@ -16,6 +16,12 @@
     <div>
         <h3>Organization</h3>
         <%= f.collection_select :organization_id, organizations, :id, :name %>
+        <br>
+        <label for="resource_organization_name">New Organization</label>
+        <%= f.fields_for :organization, resource.build_organization do |organization_fields| %>
+            <%= organization_fields.text_field :name %>
+        <% end %>
+
     </div>
 
     <div>

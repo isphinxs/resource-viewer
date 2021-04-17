@@ -31,7 +31,7 @@ class ResourcesController < ApplicationController
     end
 
     def update
-        # byebug
+        byebug
         set_resource
         @resource.update(resource_params)
         redirect_to resource_path(@resource)
@@ -47,6 +47,6 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-        params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, category_ids: [], categories_attributes: [:name])
+        params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, organization_attributes: :name, category_ids: [], categories_attributes: [:name])
     end
 end
