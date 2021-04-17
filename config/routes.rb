@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "pages#home"
+
   resources :resources
   resources :organizations
   resources :categories

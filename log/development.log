@@ -403,3 +403,39 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 2947)
 
 
+Started GET "/" for ::1 at 2021-04-17 15:07:17 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 1849)
+Completed 200 OK in 17ms (Views: 14.7ms | Allocations: 2976)
+
+
+Started GET "/" for ::1 at 2021-04-17 15:10:02 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 1843)
+Completed 200 OK in 19ms (Views: 16.7ms | Allocations: 2963)
+
+
+Started GET "/" for ::1 at 2021-04-17 15:10:36 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.4ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 1850)
+Completed 200 OK in 129ms (Views: 118.3ms | Allocations: 2971)
+
+
+Started GET "/" for ::1 at 2021-04-17 15:10:48 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.7ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 1841)
+Completed 200 OK in 21ms (Views: 19.2ms | Allocations: 2958)
+
+
