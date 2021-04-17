@@ -4,7 +4,7 @@ class CreateResources < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :amount
       t.string :link
-      t.string :description
+      t.text :description
       t.references :organization, null: false, foreign_key: true
 
       t.timestamps
