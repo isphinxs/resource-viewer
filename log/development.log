@@ -4836,3 +4836,176 @@ Processing by OrganizationsController#show as HTML
 Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 2653)
 
 
+Started GET "/categories" for ::1 at 2021-04-17 19:51:28 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 1286)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 3163)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.3ms | Allocations: 4295)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-17 19:51:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1213)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2849)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 0.5ms | Allocations: 3909)
+
+
+Started GET "/categories/1/edit" for ::1 at 2021-04-17 19:51:31 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 8.5ms | Allocations: 797)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1111)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 2745)
+Completed 200 OK in 35ms (Views: 27.1ms | ActiveRecord: 0.4ms | Allocations: 3805)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-17 19:51:33 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2657)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.4ms | Allocations: 3589)
+
+
+Started GET "/categories/1/edit" for ::1 at 2021-04-17 19:51:49 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 4.8ms | Allocations: 558)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 653)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2281)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 3213)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-17 19:52:21 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.5ms | Allocations: 1218)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 3095)
+Completed 200 OK in 58ms (Views: 49.2ms | ActiveRecord: 0.8ms | Allocations: 4771)
+
+
+Started GET "/organizations" for ::1 at 2021-04-17 19:52:23 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 2643)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.2ms | Allocations: 3558)
+
+
+Started GET "/organizations/new" for ::1 at 2021-04-17 19:52:25 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 3.4ms | Allocations: 715)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1030)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 2663)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 3183)
+
+
+Started GET "/organizations" for ::1 at 2021-04-17 19:52:27 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 856)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 2485)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.9ms | Allocations: 2874)
+
+
+Started GET "/resources" for ::1 at 2021-04-17 19:52:30 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1090)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2726)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 3635)
+
+
+Started GET "/resources/1" for ::1 at 2021-04-17 19:52:31 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:46:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:18:in `organization_name'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 1]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2124)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3760)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 1.1ms | Allocations: 4817)
+
+
+Started GET "/resources/1/edit" for ::1 at 2021-04-17 19:52:34 -0400
+Processing by ResourcesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:46:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/edit.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/resources/_form.html.erb:18
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/resources/_form.html.erb:29
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "categories"."id" FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 1]]
+  ↳ app/views/resources/_form.html.erb:29
+  Rendered resources/_form.html.erb (Duration: 33.0ms | Allocations: 6414)
+  Rendered resources/edit.html.erb within layouts/application (Duration: 39.9ms | Allocations: 6725)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 8359)
+Completed 200 OK in 55ms (Views: 45.2ms | ActiveRecord: 2.4ms | Allocations: 9446)
+
+
+Started GET "/resources/1" for ::1 at 2021-04-17 19:52:36 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (1.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:46:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:18:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 1]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3509)
+Completed 200 OK in 25ms (Views: 15.2ms | ActiveRecord: 2.0ms | Allocations: 4444)
+
+
