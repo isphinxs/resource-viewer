@@ -14,6 +14,16 @@ class ResourcesController < ApplicationController
     end
 
     def edit
+        set_resource
+        @categories = Category.all
+        @organizations = Organization.all
+    end
+
+    def update
+        # byebug
+        set_resource
+        @resource.update(resource_params)
+        redirect_to resource_path(@resource)
     end
 
     def destroy
@@ -23,5 +33,9 @@ class ResourcesController < ApplicationController
 
     def set_resource
         @resource = Resource.find_by(id: params[:id])
+    end
+
+    def resource_params
+        params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, category_ids: [])
     end
 end

@@ -1,0 +1,28 @@
+<h1>Edit Resource</h1>
+<%= form_with model: @resource do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br>
+        <%= f.label :amount %>
+        <%= f.text_field :amount %>
+        <br>
+        <%= f.label :link %>
+        <%= f.text_field :link %>
+        <br>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </div>
+
+    <div>
+        <h3>Organization</h3>
+        <%= f.collection_select :organization_id, @organizations, :id, :name %>
+    </div>
+
+    <div>
+        <h3>Categories</h3>
+        <%= f.collection_check_boxes :category_ids, @categories, :id, :name %>
+    </div>
+
+    <%= f.submit%>
+<% end %>

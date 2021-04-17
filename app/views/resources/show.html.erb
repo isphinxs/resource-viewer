@@ -2,5 +2,13 @@
 <p>Name: <%= @resource.name %></p>
 <p>Amount: <%= @resource.amount %></p>
 <p>Link: <%= @resource.link %></p>
-<p>Organization: <%= @resource.organization_name %></p>
+<p>Organization: <%= link_to @resource.organization_name, organization_path(@resource.organization) %></p>
 <p>Description: <%= @resource.description %></p>
+<p>Categories:</p>
+<ul>
+    <% @resource.categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category) %> </li>
+    <% end %>
+</ul>
+
+<%= link_to "Edit", edit_resource_path(@resource) %>
