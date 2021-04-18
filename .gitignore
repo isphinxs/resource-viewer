@@ -1,3 +1,5 @@
+config/master.key
+
 *.gem
 *.rbc
 /.config

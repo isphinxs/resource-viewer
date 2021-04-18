@@ -5124,3 +5124,64 @@ Processing by OrganizationsController#index as HTML
 Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 2873)
 
 
+Started GET "/resources" for ::1 at 2021-04-17 20:03:37 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1117)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 2994)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 4130)
+
+
+Started GET "/resources/1" for ::1 at 2021-04-17 20:03:39 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:46:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:18:in `organization_name'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 1]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 47.4ms | Allocations: 8936)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 10572)
+Completed 200 OK in 66ms (Views: 49.5ms | ActiveRecord: 5.5ms | Allocations: 11747)
+
+
+Started GET "/resources" for ::1 at 2021-04-17 20:03:41 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2567)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 2956)
+
+
+Started GET "/resources" for ::1 at 2021-04-17 20:05:20 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:2
+  Rendered collection of resources/_resource.html.erb [7 times] (Duration: 2.9ms | Allocations: 312)
+  Rendered resources/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1473)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 3350)
+Completed 200 OK in 54ms (Views: 46.7ms | ActiveRecord: 0.5ms | Allocations: 4478)
+
+
+Started GET "/resources" for ::1 at 2021-04-17 20:05:51 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1090)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2967)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.0ms | Allocations: 4095)
+
+
