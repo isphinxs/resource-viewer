@@ -3,8 +3,12 @@
 
 <h2>Available Resources</h2>
 <ul>
-<% @category.resources.each do |resource| %>
-    <li><%= link_to resource.name, resource_path(resource) %></li>
+<% if @category.resources.empty? %>
+    <li>No Resources Available</li>
+<% else %>
+    <% @category.resources.each do |resource| %>
+        <li><%= link_to resource.name, resource_path(resource) %></li>
+    <% end %>
 <% end %>
 </ul>
 

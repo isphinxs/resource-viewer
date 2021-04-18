@@ -1,5 +1,16 @@
 <h1>Organization Show</h1>
 <p><%= @organization.name %></p>
 
+<h2>Available Resources</h2>
+<ul>
+<% if @organization.resources.empty? %>
+    <li>No Resources Available</li>
+<% else %>
+    <% @organization.resources.each do |resource| %>
+        <li><%= link_to resource.name, resource_path(resource) %></li>
+    <% end %>
+<% end %>
+</ul>
+
 <%= link_to "New", new_organization_path %>
 <%= link_to "Edit", edit_organization_path(@organization) %>
