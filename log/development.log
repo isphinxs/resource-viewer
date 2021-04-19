@@ -5185,3 +5185,193 @@ Processing by ResourcesController#index as HTML
 Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.0ms | Allocations: 4095)
 
 
+Started GET "/resources" for ::1 at 2021-04-19 08:19:48 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 6242)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 12479)
+Completed 200 OK in 119ms (Views: 71.9ms | ActiveRecord: 2.0ms | Allocations: 18414)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 08:19:55 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 499.3ms | Allocations: 229019)
+  Rendered layout layouts/application.html.erb (Duration: 503.4ms | Allocations: 230656)
+Completed 200 OK in 511ms (Views: 508.0ms | ActiveRecord: 0.0ms | Allocations: 231567)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 08:20:23 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 51.2ms | Allocations: 8224)
+  Rendered layout layouts/application.html.erb (Duration: 77.3ms | Allocations: 10102)
+Completed 200 OK in 133ms (Views: 88.4ms | ActiveRecord: 0.0ms | Allocations: 11226)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 08:20:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 83.4ms | Allocations: 5988)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 7872)
+Completed 200 OK in 122ms (Views: 118.6ms | ActiveRecord: 0.0ms | Allocations: 8992)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 08:23:55 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 6600)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 8476)
+Completed 200 OK in 25ms (Views: 23.5ms | Allocations: 9603)
+
+
+Started POST "/signup" for ::1 at 2021-04-19 08:26:06 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/signup" for ::1 at 2021-04-19 17:56:11 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 6351)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8091)
+Completed 200 OK in 24ms (Views: 21.7ms | Allocations: 8685)
+
+
+Started POST "/signup" for ::1 at 2021-04-19 17:56:26 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"Sam", "last_name"=>"Bam", "username"=>"sammy", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Save "}
+Completed 400 Bad Request in 18ms (Allocations: 1065)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:18:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/signup" for ::1 at 2021-04-19 17:56:56 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"Sam", "last_name"=>"Bam", "username"=>"sammy", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Save "}
+Completed 400 Bad Request in 6ms (Allocations: 970)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:19:in `user_params'
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/signup" for ::1 at 2021-04-19 17:57:20 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"Sam", "last_name"=>"Bam", "username"=>"sammy", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Save "}
+Started GET "/signup" for ::1 at 2021-04-19 17:58:22 -0400
+Completed 400 Bad Request in 61099ms (Allocations: 43385)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:20:in `user_params'
+app/controllers/users_controller.rb:8:in `create'
+Processing by UsersController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2813)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 2883)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.4ms | Allocations: 9052)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x007ff7fdd14eb0>
+Did you mean?  user_path):
+    1: <h1>Sign Up</h1>
+    2: <%= form_with model: @user do |f| %>
+    3:     <%= f.label :first_name %>
+    4:     <%= f.text_field :first_name %>
+    5:     <br>
+  
+app/views/users/new.html.erb:2
+Started GET "/signup" for ::1 at 2021-04-19 17:58:32 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 24.3ms | Allocations: 2741)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 2811)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 3190)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x007ff8032c0288>
+Did you mean?  user_path):
+    1: <h1>Sign Up</h1>
+    2: <%= form_with model: @user do |f| %>
+    3:     <%= f.label :first_name %>
+    4:     <%= f.text_field :first_name %>
+    5:     <br>
+  
+app/views/users/new.html.erb:2
+Started GET "/rails/info/routes" for ::1 at 2021-04-19 17:58:53 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [61 times] (Duration: 32.8ms | Allocations: 6662)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.3ms | Allocations: 727)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 55.1ms | Allocations: 12155)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 59.8ms | Allocations: 12392)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 13505)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-04-19 17:58:53 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [61 times] (Duration: 56.8ms | Allocations: 6774)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.9ms | Allocations: 731)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 70.5ms | Allocations: 12378)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 72.4ms | Allocations: 12631)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.0ms | Allocations: 13845)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 17:59:18 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1992)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 3870)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 5010)
+
+
+Started POST "/signup" for ::1 at 2021-04-19 17:59:37 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Sam", "last_name"=>"Bam", "username"=>"sammy", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sam"], ["last_name", "Bam"], ["password_digest", "$2a$12$LNJIg7NxCSMq8GfrrigKROvK97V2kDFOk6NyEGxuD1awM2QIqy.Qm"], ["username", "sammy"], ["email", "test@test.com"], ["created_at", "2021-04-19 21:59:38.256576"], ["updated_at", "2021-04-19 21:59:38.256576"]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 327ms (ActiveRecord: 4.8ms | Allocations: 8066)
+
+
+Started GET "/" for ::1 at 2021-04-19 17:59:38 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1767)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2673)
+
+
