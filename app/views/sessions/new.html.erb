@@ -1,5 +1,8 @@
 <h1>Log In</h1>
 <%= form_with model: @user do |f| %>
+    <% if flash[:alert] %>
+        <p><%= flash[:alert] %></p>
+    <% end %>
     <%= f.label :username %>
     <%= f.text_field :username %>
     <br>
