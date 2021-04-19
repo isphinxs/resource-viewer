@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+    before_action :require_login
+
     def index
         @categories = Category.all
     end
@@ -35,6 +37,10 @@ class CategoriesController < ApplicationController
     end
 
     private
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
+    end
 
     def set_category
         @category = Category.find_by(id: params[:id])

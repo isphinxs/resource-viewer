@@ -1,4 +1,6 @@
 class ResourcesController < ApplicationController
+    before_action :require_login
+    
     def index
         @resources = Resource.all
     end
@@ -41,6 +43,10 @@ class ResourcesController < ApplicationController
     end
 
     private
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
+    end
 
     def set_resource
         @resource = Resource.find_by(id: params[:id])

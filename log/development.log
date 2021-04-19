@@ -5656,3 +5656,151 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 2931)
 
 
+Started GET "/resources" for ::1 at 2021-04-19 19:27:53 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 5427)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 7063)
+Completed 200 OK in 45ms (Views: 23.4ms | ActiveRecord: 2.0ms | Allocations: 10263)
+
+
+Started GET "/organizations" for ::1 at 2021-04-19 19:27:56 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3110)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 4746)
+Completed 200 OK in 44ms (Views: 27.7ms | ActiveRecord: 2.6ms | Allocations: 6411)
+
+
+Started GET "/categories" for ::1 at 2021-04-19 19:27:58 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 3398)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 5034)
+Completed 200 OK in 48ms (Views: 26.3ms | ActiveRecord: 3.9ms | Allocations: 7388)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:33:41 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 1815)
+Completed 200 OK in 33ms (Views: 32.2ms | Allocations: 2339)
+
+
+Started POST "/logout" for ::1 at 2021-04-19 19:33:46 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 7ms (Allocations: 1544)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:34:54 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 2176)
+Completed 200 OK in 17ms (Views: 14.3ms | Allocations: 3293)
+
+
+Started GET "/organizations" for ::1 at 2021-04-19 19:35:31 -0400
+Processing by OrganizationsController#index as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 3ms (Allocations: 276)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:35:33 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2175)
+Completed 200 OK in 14ms (Views: 12.0ms | Allocations: 3294)
+
+
+Started GET "/categories" for ::1 at 2021-04-19 19:35:35 -0400
+Processing by CategoriesController#index as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 3ms (Allocations: 269)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:35:37 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 1719)
+Completed 200 OK in 63ms (Views: 61.7ms | Allocations: 2097)
+
+
+Started GET "/resources" for ::1 at 2021-04-19 19:35:38 -0400
+Processing by ResourcesController#index as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (Allocations: 269)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:35:40 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 1718)
+Completed 200 OK in 11ms (Views: 9.6ms | Allocations: 2094)
+
+
+Started GET "/login" for ::1 at 2021-04-19 19:35:41 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2896)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4530)
+Completed 200 OK in 18ms (Views: 16.3ms | Allocations: 5436)
+
+
+Started POST "/login" for ::1 at 2021-04-19 19:35:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 423ms (ActiveRecord: 0.8ms | Allocations: 5800)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:35:46 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.8ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 1814)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms | Allocations: 2193)
+
+
+Started POST "/logout" for ::1 at 2021-04-19 19:35:48 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:35:48 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1719)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 2095)
+
+

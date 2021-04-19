@@ -1,4 +1,6 @@
 class OrganizationsController < ApplicationController
+    before_action :require_login
+
     def index
         @organizations = Organization.all
     end
@@ -35,6 +37,10 @@ class OrganizationsController < ApplicationController
     end
 
     private
+
+    def require_login
+        return head(:forbidden) unless session.include? :user_id
+    end
 
     def set_organization
         @organization = Organization.find_by(id: params[:id])
