@@ -1,1 +1,10 @@
 <h1>Welcome to Financial Resources for Writers!</h1>
+
+<% if session[:user_id] %>
+    <p>Welcome, User!</p>
+    <%= form_with url: logout_path do |f| %>
+        <%= f.submit "Log Out" %>
+    <% end %>
+<% else %>
+    <%= link_to "Sign Up", signup_path %> | <%= link_to "Log In", login_path %>
+<% end %>

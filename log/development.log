@@ -5375,3 +5375,284 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2673)
 
 
+Started GET "/" for ::1 at 2021-04-19 19:15:14 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2055)
+Completed 200 OK in 15ms (Views: 13.6ms | Allocations: 3177)
+
+
+Started GET "/logout" for ::1 at 2021-04-19 19:15:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-04-19 19:16:26 -0400
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 516)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 6899)
+Completed 200 OK in 91ms (Views: 62.8ms | ActiveRecord: 0.0ms | Allocations: 9933)
+
+
+Started GET "/logout" for ::1 at 2021-04-19 19:16:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-04-19 19:18:40 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1148)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 1220)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 2416)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Welcome to Financial Resources for Writers!</h1>
+
+<%= link_to "Log Out", logout_path, method: "post" %>
+<%= form_with url: "/logout", method: "post" do |f| %>
+    <%= f.submit "Log Out" %>
+<%= end %>
+):
+1:    <h1>Welcome to Financial Resources for Writers!</h1>
+2:    
+3:    <%= link_to "Log Out", logout_path, method: "post" %>
+4:    <%= form_with url: "/logout", method: "post" do |f| %>
+5:        <%= f.submit "Log Out" %>
+6:    <%= end %>
+  
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2021-04-19 19:18:46 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1137)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1209)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1567)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Welcome to Financial Resources for Writers!</h1>
+
+<%= link_to "Log Out", logout_path, method: "post" %>
+<%= form_with url: "/logout", method: "post" do |f| %>
+    <%= f.submit "Log Out" %>
+<%= end %>
+):
+1:    <h1>Welcome to Financial Resources for Writers!</h1>
+2:    
+3:    <%= link_to "Log Out", logout_path, method: "post" %>
+4:    <%= form_with url: "/logout", method: "post" do |f| %>
+5:        <%= f.submit "Log Out" %>
+6:    <%= end %>
+  
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:6: syntax error, unexpected end
+app/views/pages/home.html.erb:8: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2021-04-19 19:19:01 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1129)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1201)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 2306)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Welcome to Financial Resources for Writers!</h1>
+
+<%= form_with url: "/logout", method: "post" do |f| %>
+    <%= f.submit "Log Out" %>
+<%= end %>
+):
+1:    <h1>Welcome to Financial Resources for Writers!</h1>
+2:    
+3:    <%= form_with url: "/logout", method: "post" do |f| %>
+4:        <%= f.submit "Log Out" %>
+5:    <%= end %>
+  
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2021-04-19 19:19:39 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1125)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1196)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2297)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Welcome to Financial Resources for Writers!</h1>
+
+<%= form_with url: logout_path do |f| %>
+    <%= f.submit "Log Out" %>
+<%= end %>
+):
+1:    <h1>Welcome to Financial Resources for Writers!</h1>
+2:    
+3:    <%= form_with url: logout_path do |f| %>
+4:        <%= f.submit "Log Out" %>
+5:    <%= end %>
+  
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/pages/home.html.erb:5: syntax error, unexpected end
+app/views/pages/home.html.erb:7: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2021-04-19 19:19:49 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 358)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 2354)
+Completed 200 OK in 71ms (Views: 54.7ms | ActiveRecord: 0.0ms | Allocations: 3484)
+
+
+Started POST "/logout" for ::1 at 2021-04-19 19:19:52 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 2534)
+
+
+  
+NameError (undefined local variable or method `sesion' for #<SessionsController:0x007fed48a4a140>
+Did you mean?  session):
+  
+app/controllers/sessions_controller.rb:16:in `destroy'
+Started POST "/logout" for ::1 at 2021-04-19 19:20:04 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 8ms (Allocations: 1556)
+
+
+Started POST "/logout" for ::1 at 2021-04-19 19:20:13 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 2ms (Allocations: 321)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:20:18 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 1814)
+Completed 200 OK in 21ms (Views: 19.5ms | Allocations: 2334)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:21:54 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 2185)
+Completed 200 OK in 21ms (Views: 19.5ms | Allocations: 3307)
+
+
+Started GET "/login" for ::1 at 2021-04-19 19:21:57 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 1763)
+Completed 200 OK in 17ms (Views: 14.8ms | Allocations: 2667)
+
+
+Started GET "/login" for ::1 at 2021-04-19 19:23:48 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 537.7ms | Allocations: 227471)
+  Rendered layout layouts/application.html.erb (Duration: 542.7ms | Allocations: 229355)
+Completed 200 OK in 550ms (Views: 548.3ms | Allocations: 230472)
+
+
+Started GET "/login" for ::1 at 2021-04-19 19:24:06 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2285)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4161)
+Completed 200 OK in 35ms (Views: 33.5ms | Allocations: 5282)
+
+
+Started POST "/login" for ::1 at 2021-04-19 19:25:35 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3638)
+Completed 200 OK in 499ms (Views: 24.3ms | ActiveRecord: 2.7ms | Allocations: 13360)
+
+
+Started POST "/login" for ::1 at 2021-04-19 19:25:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 324ms (ActiveRecord: 1.7ms | Allocations: 6349)
+
+
+Started GET "/" for ::1 at 2021-04-19 19:25:52 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 389)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2023)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 2931)
+
+
