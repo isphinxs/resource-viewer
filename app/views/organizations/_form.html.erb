@@ -1,4 +1,14 @@
 <%= form_with model: organization do |f| %>
+    <% if organization.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% organization.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.submit %>

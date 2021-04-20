@@ -29,8 +29,11 @@ class OrganizationsController < ApplicationController
 
     def update
         set_organization
-        @organization.update(organization_params)
-        redirect_to organization_path(@organization)
+        if @organization.update(organization_params)
+            redirect_to organization_path(@organization)
+        else
+            render :edit
+        end
     end
     
     def destroy

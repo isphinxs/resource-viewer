@@ -6511,3 +6511,228 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 2.6ms | Allocations: 8923)
 
 
+Started GET "/organizations" for ::1 at 2021-04-19 20:11:55 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (3.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 3148)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 4784)
+Completed 200 OK in 50ms (Views: 35.9ms | ActiveRecord: 4.5ms | Allocations: 6471)
+
+
+Started GET "/organizations/new" for ::1 at 2021-04-19 20:12:56 -0400
+Processing by OrganizationsController#new as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/organizations_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 5.9ms | Allocations: 908)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1226)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 3102)
+Completed 200 OK in 59ms (Views: 36.7ms | ActiveRecord: 3.4ms | Allocations: 8015)
+
+
+Started POST "/organizations" for ::1 at 2021-04-19 20:12:58 -0400
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "organization"=>{"name"=>""}, "commit"=>"Create Organization"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+  [1m[36mOrganization Create (2.7ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2021-04-20 00:12:58.416048"], ["updated_at", "2021-04-20 00:12:58.416048"]]
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+Redirected to http://localhost:3000/organizations/10
+Completed 302 Found in 24ms (ActiveRecord: 7.0ms | Allocations: 2553)
+
+
+Started GET "/organizations/10" for ::1 at 2021-04-19 20:12:58 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  [1m[36mOrganization Load (1.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 10], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  Rendered organizations/show.html.erb within layouts/application (Duration: 28.4ms | Allocations: 5153)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 8186)
+Completed 200 OK in 55ms (Views: 33.0ms | ActiveRecord: 3.7ms | Allocations: 9968)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY "organizations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrganization Destroy (0.9ms)[0m  [1m[31mDELETE FROM "organizations" WHERE "organizations"."id" = ?[0m  [["id", 10]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/organizations" for ::1 at 2021-04-19 20:13:40 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 2656)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.5ms | Allocations: 3179)
+
+
+Started GET "/organizations/new" for ::1 at 2021-04-19 20:14:22 -0400
+Processing by OrganizationsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/organizations_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 2.7ms | Allocations: 596)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 691)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 2324)
+Completed 200 OK in 45ms (Views: 19.2ms | ActiveRecord: 4.5ms | Allocations: 6768)
+
+
+Started POST "/organizations" for ::1 at 2021-04-19 20:14:27 -0400
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "organization"=>{"name"=>"Schumm-Kertzmanne"}, "commit"=>"Create Organization"}
+  [1m[36mOrganization Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."name" = ? LIMIT ?[0m  [["name", "Schumm-Kertzmanne"], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:18:in `create'
+  [1m[36mCACHE Organization Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."name" = ? LIMIT ?[0m  [["name", "Schumm-Kertzmanne"], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+  [1m[36mOrganization Create (0.7ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Schumm-Kertzmanne"], ["created_at", "2021-04-20 00:14:27.125718"], ["updated_at", "2021-04-20 00:14:27.125718"]]
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:19:in `create'
+Redirected to http://localhost:3000/organizations/11
+Completed 302 Found in 28ms (ActiveRecord: 3.1ms | Allocations: 4082)
+
+
+Started GET "/organizations/11" for ::1 at 2021-04-19 20:14:27 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 11], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  Rendered organizations/show.html.erb within layouts/application (Duration: 15.3ms | Allocations: 3685)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5314)
+Completed 200 OK in 29ms (Views: 20.7ms | ActiveRecord: 1.7ms | Allocations: 6371)
+
+
+Started GET "/organizations" for ::1 at 2021-04-19 20:14:36 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (2.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 899)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 2528)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 2.5ms | Allocations: 2923)
+
+
+Started GET "/organizations/new" for ::1 at 2021-04-19 20:14:42 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 4.4ms | Allocations: 533)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2256)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 2654)
+
+
+Started POST "/organizations" for ::1 at 2021-04-19 20:14:45 -0400
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "organization"=>{"name"=>"Schumm-Kertzmanne"}, "commit"=>"Create Organization"}
+  [1m[36mOrganization Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."name" = ? LIMIT ?[0m  [["name", "Schumm-Kertzmanne"], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 3.3ms | Allocations: 1562)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1657)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3285)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 4552)
+
+
+Started GET "/organizations/new" for ::1 at 2021-04-19 20:14:50 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 3.5ms | Allocations: 533)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2256)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 2654)
+
+
+Started GET "/organizations" for ::1 at 2021-04-19 20:14:52 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 885)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2515)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 2911)
+
+
+Started GET "/organizations/11" for ::1 at 2021-04-19 20:14:54 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 11], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  Rendered organizations/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2519)
+Completed 200 OK in 46ms (Views: 21.7ms | ActiveRecord: 0.5ms | Allocations: 3457)
+
+
+Started GET "/organizations/11/edit" for ::1 at 2021-04-19 20:14:56 -0400
+Processing by OrganizationsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 7.4ms | Allocations: 579)
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 13.0ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2406)
+Completed 200 OK in 23ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 3472)
+
+
+Started PATCH "/organizations/11" for ::1 at 2021-04-19 20:14:59 -0400
+Processing by OrganizationsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "organization"=>{"name"=>"Schumm-Kertzmann"}, "commit"=>"Update Organization", "id"=>"11"}
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:32:in `update'
+  [1m[36mOrganization Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."name" = ? AND "organizations"."id" != ? LIMIT ?[0m  [["name", "Schumm-Kertzmann"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/organizations_controller.rb:32:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 5.2ms | Allocations: 1526)
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1621)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3249)
+Completed 200 OK in 39ms (Views: 12.8ms | ActiveRecord: 3.2ms | Allocations: 7366)
+
+
+Started GET "/organizations/11/edit" for ::1 at 2021-04-19 20:15:01 -0400
+Processing by OrganizationsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:49:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 1.9ms | Allocations: 559)
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 654)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2282)
+Completed 200 OK in 19ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 3220)
+
+
