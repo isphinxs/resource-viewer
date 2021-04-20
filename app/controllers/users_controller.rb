@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+    before_action :require_authorization
+    skip_before_action :require_authorization, only: [:new, :create]
+
     def show
         current_user
     end
@@ -19,7 +22,6 @@ class UsersController < ApplicationController
     end
 
     def edit
-        # return head(:forbidden) unless params[:id] == session[:user_id]
         @user = User.find_by(id: session[:user_id])
     end
 
@@ -40,9 +42,13 @@ class UsersController < ApplicationController
     end
 
     private
-
+    
     def current_user
         @user = User.find_by(id: session[:user_id])
+    end
+
+    def require_authorization
+        return head(:forbidden) unless current_user == User.find_by(id: params[:id])
     end
 
     def user_params
