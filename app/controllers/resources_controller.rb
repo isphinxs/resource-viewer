@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
     before_action :require_login
-    
+
     def index
         @resources = Resource.all
     end
@@ -21,6 +21,8 @@ class ResourcesController < ApplicationController
             @resource.save
             redirect_to resource_path(@resource)
         else
+            @organizations = Organization.all
+            @categories = Category.all
             render :new
         end
     end
@@ -31,12 +33,17 @@ class ResourcesController < ApplicationController
         @categories = Category.all
         @organizations = Organization.all
     end
-
+    
     def update
         # byebug
         set_resource
-        @resource.update(resource_params)
-        redirect_to resource_path(@resource)
+        if @resource.update(resource_params)
+            redirect_to resource_path(@resource)
+        else
+            @categories = Category.all
+            @organizations = Organization.all
+            render :edit
+        end
     end
 
     def destroy

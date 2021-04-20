@@ -4,6 +4,9 @@ class Resource < ApplicationRecord
   has_many :categories, through: :resource_categories
   accepts_nested_attributes_for :categories, reject_if: proc { |attributes| attributes["name"].blank? }
   accepts_nested_attributes_for :organization, reject_if: proc { |attributes| attributes["name"].blank? }
+  
+  validates :name, :amount, :link, :description, presence: true
+  validates :name, uniqueness: true, on: :create
 
   def categories_attributes=(categories_attributes)
     categories_attributes.values.each do |category_attribute|

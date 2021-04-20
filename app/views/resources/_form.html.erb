@@ -1,4 +1,15 @@
 <%= form_with model: resource do |f| %>
+    <% if resource.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% resource.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
     <div>
         <%= f.label :name %>
         <%= f.text_field :name %>
