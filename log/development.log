@@ -7153,3 +7153,96 @@ Processing by ResourcesController#show as HTML
 Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.8ms | Allocations: 4454)
 
 
+Started GET "/" for ::1 at 2021-04-19 20:29:15 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.8ms | Allocations: 384)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2018)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 2925)
+
+
+Started POST "/logout" for ::1 at 2021-04-19 20:29:16 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/" for ::1 at 2021-04-19 20:29:16 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 1719)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 2096)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 20:29:21 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 19.0ms | Allocations: 1948)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 3581)
+Completed 200 OK in 44ms (Views: 25.6ms | ActiveRecord: 1.6ms | Allocations: 8837)
+
+
+Started GET "/signup" for ::1 at 2021-04-19 20:31:07 -0400
+Processing by UsersController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 1909)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 3786)
+Completed 200 OK in 133ms (Views: 54.4ms | ActiveRecord: 5.2ms | Allocations: 12473)
+
+
+Started POST "/signup" for ::1 at 2021-04-19 20:31:11 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Sam", "last_name"=>"", "username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1405)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1475)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2132)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Sign Up</h1>
+    2: <%= form_with model: @user, url: signup_path do |f| %>
+    3:     <% if @user.errors.any? %>
+    4:         <div id="error_explanation">
+    5:             <h2>There were some errors:</h2>
+    6:             <ul>
+  
+app/views/users/new.html.erb:3
+app/views/users/new.html.erb:2
+app/controllers/users_controller.rb:13:in `create'
+Started POST "/signup" for ::1 at 2021-04-19 20:32:09 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Sam", "last_name"=>"", "username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 6609)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 8243)
+Completed 200 OK in 80ms (Views: 37.5ms | ActiveRecord: 6.8ms | Allocations: 14404)
+
+
+Started POST "/signup" for ::1 at 2021-04-19 20:32:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Sam", "last_name"=>"Bam", "username"=>"sammy", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 5492)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 7125)
+Completed 200 OK in 51ms (Views: 30.5ms | ActiveRecord: 1.6ms | Allocations: 14161)
+
+

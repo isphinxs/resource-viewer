@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 
     def create
         # byebug
-        user = User.new(user_params)
-        if user.valid?
-            user.save
+        @user = User.new(user_params)
+        if @user.valid?
+            @user.save
             redirect_to root_path
         else
             render :new
