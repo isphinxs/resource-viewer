@@ -24,3 +24,7 @@
     <br>
     <%= f.submit %>
 <% end %>
+
+<%= form_with model: @user, method: "delete" do |f| %>
+    <%= f.submit "Delete Account" %>
+<% end %>

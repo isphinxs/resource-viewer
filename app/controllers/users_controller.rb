@@ -39,6 +39,10 @@ class UsersController < ApplicationController
     end
 
     def destroy
+        # byebug
+        current_user.destroy
+        session[:user_id] = nil
+        redirect_to root_path
     end
 
     private
