@@ -14,3 +14,6 @@
 
 <%= link_to "New", new_category_path %>
 <%= link_to "Edit", edit_category_path(@category) %>
+<%= form_with model: @category, method: "delete" do |f| %>
+    <%= f.submit "Delete" %>
+<% end %>

@@ -7246,3 +7246,249 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 51ms (Views: 30.5ms | ActiveRecord: 1.6ms | Allocations: 14161)
 
 
+Started GET "/" for ::1 at 2021-04-19 20:33:51 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1938)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 2844)
+
+
+Started GET "/login" for ::1 at 2021-04-19 20:33:53 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2949)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 4583)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 5485)
+
+
+Started POST "/login" for ::1 at 2021-04-19 20:33:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 334ms (ActiveRecord: 0.5ms | Allocations: 1015)
+
+
+Started GET "/login" for ::1 at 2021-04-19 20:33:58 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2098)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3726)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 4114)
+
+
+Started POST "/login" for ::1 at 2021-04-19 20:34:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 326ms (ActiveRecord: 0.3ms | Allocations: 871)
+
+
+Started GET "/" for ::1 at 2021-04-19 20:34:04 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1814)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 2192)
+
+
+Started GET "/categories" for ::1 at 2021-04-19 20:35:56 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/categories/index.html.erb:3
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 4299)
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 5935)
+Completed 200 OK in 76ms (Views: 64.3ms | ActiveRecord: 2.8ms | Allocations: 8402)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:36:59 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 116.8ms | Allocations: 11848)
+  Rendered layout layouts/application.html.erb (Duration: 117.5ms | Allocations: 11918)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 2.3ms | Allocations: 13681)
+
+
+  
+ActionView::Template::Error (undefined method `delete_category_path' for #<ActionView::Base:0x007fed5004f2f0>
+Did you mean?  edit_category_path):
+    14: 
+    15: <%= link_to "New", new_category_path %>
+    16: <%= link_to "Edit", edit_category_path(@category) %>
+    17: <%= link_to "Delete", delete_category_path(@category), method: "delete" %>
+  
+app/views/categories/show.html.erb:17
+Started GET "/rails/info/routes" for ::1 at 2021-04-19 20:37:12 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [61 times] (Duration: 52.6ms | Allocations: 6661)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 7.9ms | Allocations: 727)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 75.2ms | Allocations: 12154)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 97.9ms | Allocations: 12391)
+Completed 200 OK in 119ms (Views: 110.8ms | ActiveRecord: 0.0ms | Allocations: 13505)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-04-19 20:37:13 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [61 times] (Duration: 58.0ms | Allocations: 6806)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 5.1ms | Allocations: 900)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 76.5ms | Allocations: 12486)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 90.4ms | Allocations: 14329)
+Completed 200 OK in 100ms (Views: 97.0ms | ActiveRecord: 0.0ms | Allocations: 15412)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:37:29 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 280.2ms | Allocations: 3202)
+Completed 200 OK in 297ms (Views: 286.9ms | ActiveRecord: 0.7ms | Allocations: 4885)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:37:32 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1079)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2709)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 3648)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:38:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1276)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1347)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.3ms | Allocations: 3010)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Category Show</h1>
+<p><%= @category.name %></p>
+
+<h2>Available Resources</h2>
+<ul>
+<% if @category.resources.empty? %>
+    <li>No Resources Available</li>
+<% else %>
+    <% @category.resources.each do |resource| %>
+        <li><%= link_to resource.name, resource_path(resource) %></li>
+    <% end %>
+<% end %>
+</ul>
+
+<%= link_to "New", new_category_path %>
+<%= link_to "Edit", edit_category_path(@category) %>
+<%= form_with model: @category, method: "delete" do |f| %>
+    <%= f.submit "Delete" %>
+<%= end %>
+
+):
+1:    <h1>Category Show</h1>
+2:    <p><%= @category.name %></p>
+3:    
+4:    <h2>Available Resources</h2>
+5:    <ul>
+6:    <% if @category.resources.empty? %>
+7:        <li>No Resources Available</li>
+8:    <% else %>
+9:        <% @category.resources.each do |resource| %>
+10:            <li><%= link_to resource.name, resource_path(resource) %></li>
+11:        <% end %>
+12:    <% end %>
+13:    </ul>
+14:    
+15:    <%= link_to "New", new_category_path %>
+16:    <%= link_to "Edit", edit_category_path(@category) %>
+17:    <%= form_with model: @category, method: "delete" do |f| %>
+18:        <%= f.submit "Delete" %>
+19:    <%= end %>
+  
+app/views/categories/show.html.erb:19: syntax error, unexpected end
+app/views/categories/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/categories/show.html.erb:19: syntax error, unexpected end
+app/views/categories/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/categories/show.html.erb:19: syntax error, unexpected end
+app/views/categories/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/categories/show.html.erb:19: syntax error, unexpected end
+app/views/categories/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/categories/show.html.erb:19: syntax error, unexpected end
+app/views/categories/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/categories/show.html.erb:19: syntax error, unexpected end
+app/views/categories/show.html.erb:22: syntax error, unexpected end, expecting ')'
+Started GET "/categories/1" for ::1 at 2021-04-19 20:38:44 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 105.2ms | Allocations: 1566)
+  Rendered layout layouts/application.html.erb (Duration: 119.3ms | Allocations: 3443)
+Completed 200 OK in 129ms (Views: 122.5ms | ActiveRecord: 1.0ms | Allocations: 5125)
+
+
+Started DELETE "/categories/1" for ::1 at 2021-04-19 20:38:48 -0400
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:40:in `destroy'
+  [1m[36mCategory Destroy (1.0ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 28ms (ActiveRecord: 5.1ms | Allocations: 2607)
+
+
+Started GET "/categories" for ::1 at 2021-04-19 20:38:48 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1255)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2891)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 3415)
+
+
