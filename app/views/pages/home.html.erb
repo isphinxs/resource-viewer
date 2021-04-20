@@ -2,6 +2,7 @@
 
 <% if session[:user_id] %>
     <p>Welcome, User!</p>
+    <%= link_to "Account", user_path(User.find_by(id: session[:user_id])) %>
     <%= form_with url: logout_path do |f| %>
         <%= f.submit "Log Out" %>
     <% end %>

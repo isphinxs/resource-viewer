@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+    def show
+        current_user
+    end
+
     def new
         @user = User.new
     end
@@ -14,7 +18,32 @@ class UsersController < ApplicationController
         end
     end
 
+    def edit
+        # return head(:forbidden) unless params[:id] == session[:user_id]
+        @user = User.find_by(id: session[:user_id])
+    end
+
+    def update
+        current_user
+        if user_params[:password].blank?
+            user_params.delete(:password)
+            user_params.delete(:password_confirmation)
+        end
+        if @user.update(user_params)
+            redirect_to user_path(@user)
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+    end
+
     private
+
+    def current_user
+        @user = User.find_by(id: session[:user_id])
+    end
 
     def user_params
         params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
