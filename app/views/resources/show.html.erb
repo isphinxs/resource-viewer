@@ -13,3 +13,6 @@
 
 <%= link_to "New", new_resource_path %>
 <%= link_to "Edit", edit_resource_path(@resource) %>
+<%= form_with model: @resource, method: "delete" do |f| %>
+    <%= f.submit "Delete" %>
+<% end %>

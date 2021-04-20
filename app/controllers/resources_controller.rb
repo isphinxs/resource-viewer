@@ -47,6 +47,8 @@ class ResourcesController < ApplicationController
     end
 
     def destroy
+        set_resource.destroy
+        redirect_to resources_path
     end
 
     private

@@ -7693,3 +7693,205 @@ Processing by OrganizationsController#index as HTML
 Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 3166)
 
 
+Started GET "/resources" for ::1 at 2021-04-19 20:45:43 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/resources/index.html.erb:3
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 86.6ms | Allocations: 6156)
+  Rendered layout layouts/application.html.erb (Duration: 96.5ms | Allocations: 12147)
+Completed 200 OK in 111ms (Views: 102.0ms | ActiveRecord: 3.4ms | Allocations: 15219)
+
+
+Started GET "/resources/7" for ::1 at 2021-04-19 20:45:46 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 46.8ms | Allocations: 12689)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 14322)
+Completed 200 OK in 59ms (Views: 46.7ms | ActiveRecord: 5.3ms | Allocations: 15504)
+
+
+Started GET "/resources/new" for ::1 at 2021-04-19 20:45:52 -0400
+Processing by ResourcesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/new.html.erb within layouts/application
+  [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/resources/_form.html.erb:29
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/resources/_form.html.erb:40
+  Rendered resources/_form.html.erb (Duration: 84.0ms | Allocations: 5530)
+  Rendered resources/new.html.erb within layouts/application (Duration: 90.7ms | Allocations: 5848)
+  Rendered layout layouts/application.html.erb (Duration: 115.6ms | Allocations: 7481)
+Completed 200 OK in 120ms (Views: 115.2ms | ActiveRecord: 1.7ms | Allocations: 8036)
+
+
+Started POST "/resources" for ::1 at 2021-04-19 20:46:34 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "resource"=>{"name"=>"Test", "amount"=>"$2525", "link"=>"blah", "description"=>"alksdfk;asdlf", "organization_id"=>"1", "organization_attributes"=>{"name"=>"Newbie"}, "categories_attributes"=>{"0"=>{"name"=>"New"}}}, "commit"=>"Create Resource"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:19:in `create'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "New"], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:14:in `block in categories_attributes='
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/resource.rb:14:in `block in categories_attributes='
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "New"], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:14:in `block in categories_attributes='
+  [1m[36mCategory Create (14.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "New"], ["created_at", "2021-04-20 00:46:34.143678"], ["updated_at", "2021-04-20 00:46:34.143678"]]
+  ↳ app/models/resource.rb:14:in `block in categories_attributes='
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/resource.rb:14:in `block in categories_attributes='
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = ? AND "categories"."id" != ? LIMIT ?[0m  [["name", "New"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:20:in `create'
+  [1m[36mOrganization Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."name" = ? LIMIT ?[0m  [["name", "Newbie"], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:20:in `create'
+  [1m[36mResource Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."name" = ? LIMIT ?[0m  [["name", "Test"], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:20:in `create'
+  [1m[36mCACHE Category Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = ? AND "categories"."id" != ? LIMIT ?[0m  [["name", "New"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mCACHE Organization Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."name" = ? LIMIT ?[0m  [["name", "Newbie"], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mCACHE Resource Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."name" = ? LIMIT ?[0m  [["name", "Test"], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mOrganization Create (3.1ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Newbie"], ["created_at", "2021-04-20 00:46:34.235517"], ["updated_at", "2021-04-20 00:46:34.235517"]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mResource Create (32.9ms)[0m  [1m[32mINSERT INTO "resources" ("name", "amount", "link", "description", "organization_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Test"], ["amount", "$2525"], ["link", "blah"], ["description", "alksdfk;asdlf"], ["organization_id", 12], ["created_at", "2021-04-20 00:46:34.332131"], ["updated_at", "2021-04-20 00:46:34.332131"]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mResourceCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "resource_categories" ("category_id", "resource_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 17], ["resource_id", 8], ["created_at", "2021-04-20 00:46:34.397285"], ["updated_at", "2021-04-20 00:46:34.397285"]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+Redirected to http://localhost:3000/resources/8
+Completed 302 Found in 315ms (ActiveRecord: 65.4ms | Allocations: 27850)
+
+
+Started GET "/resources/8" for ::1 at 2021-04-19 20:46:34 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 8]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2026)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 3654)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.8ms | Allocations: 4596)
+
+
+Started DELETE "/resources/8" for ::1 at 2021-04-19 20:46:39 -0400
+Processing by ResourcesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"8"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mResource Destroy (1.7ms)[0m  [1m[31mDELETE FROM "resources" WHERE "resources"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.0ms | Allocations: 3555)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+app/controllers/resources_controller.rb:50:in `destroy'
+Started GET "/resources/8" for ::1 at 2021-04-19 20:48:29 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 8]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 32.0ms | Allocations: 12338)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 13972)
+Completed 200 OK in 72ms (Views: 34.4ms | ActiveRecord: 3.5ms | Allocations: 24792)
+
+
+Started DELETE "/resources/8" for ::1 at 2021-04-19 20:48:32 -0400
+Processing by ResourcesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"8"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mResourceCategory Update All (0.7ms)[0m  [1m[33mUPDATE "resource_categories" SET "resource_id" = ? WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", nil], ["resource_id", 8]]
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.9ms | Allocations: 4071)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: resource_categories.resource_id):
+  
+app/controllers/resources_controller.rb:50:in `destroy'
+Started GET "/resources/8" for ::1 at 2021-04-19 20:49:38 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 8]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 114.8ms | Allocations: 12376)
+  Rendered layout layouts/application.html.erb (Duration: 117.6ms | Allocations: 14010)
+Completed 200 OK in 144ms (Views: 116.5ms | ActiveRecord: 5.2ms | Allocations: 22267)
+
+
+Started DELETE "/resources/8" for ::1 at 2021-04-19 20:49:41 -0400
+Processing by ResourcesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete", "id"=>"8"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mResourceCategory Load (0.5ms)[0m  [1m[34mSELECT "resource_categories".* FROM "resource_categories" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 8]]
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mResourceCategory Destroy (2.3ms)[0m  [1m[31mDELETE FROM "resource_categories" WHERE "resource_categories"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mResource Destroy (0.3ms)[0m  [1m[31mDELETE FROM "resources" WHERE "resources"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+  [1m[36mTRANSACTION (23.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/resources_controller.rb:50:in `destroy'
+Redirected to http://localhost:3000/resources
+Completed 302 Found in 72ms (ActiveRecord: 27.6ms | Allocations: 7406)
+
+
+Started GET "/resources" for ::1 at 2021-04-19 20:49:41 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (2.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 958)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2587)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 2.2ms | Allocations: 2982)
+
+
