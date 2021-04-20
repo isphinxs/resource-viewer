@@ -37,6 +37,8 @@ class OrganizationsController < ApplicationController
     end
     
     def destroy
+        set_organization.destroy
+        redirect_to organizations_path
     end
 
     private

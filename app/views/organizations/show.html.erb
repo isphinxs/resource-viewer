@@ -14,3 +14,6 @@
 
 <%= link_to "New", new_organization_path %>
 <%= link_to "Edit", edit_organization_path(@organization) %>
+<%= form_with model: @organization, method: "delete" do |f| %>
+    <%= f.submit "Delete" %>
+<% end %>
