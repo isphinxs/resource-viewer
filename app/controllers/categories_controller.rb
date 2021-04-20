@@ -29,8 +29,11 @@ class CategoriesController < ApplicationController
 
     def update
         set_category
-        @category.update(category_params)
-        redirect_to category_path(@category)
+        if @category.update(category_params)
+            redirect_to category_path(@category)
+        else
+            render :edit
+        end
     end
 
     def destroy

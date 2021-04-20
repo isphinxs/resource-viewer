@@ -6373,3 +6373,141 @@ Processing by CategoriesController#create as HTML
 Completed 200 OK in 31ms (Views: 16.2ms | ActiveRecord: 2.6ms | Allocations: 5474)
 
 
+Started GET "/categories/new" for ::1 at 2021-04-19 20:05:41 -0400
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 3.2ms | Allocations: 533)
+  Rendered categories/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2256)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2654)
+
+
+Started GET "/categories" for ::1 at 2021-04-19 20:05:43 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2936)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.5ms | Allocations: 3459)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:06:28 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:46:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 77.9ms | Allocations: 11893)
+  Rendered layout layouts/application.html.erb (Duration: 82.8ms | Allocations: 13529)
+Completed 200 OK in 95ms (Views: 81.4ms | ActiveRecord: 3.4ms | Allocations: 14706)
+
+
+Started GET "/categories/1/edit" for ::1 at 2021-04-19 20:06:30 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:46:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 9.1ms | Allocations: 588)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 11.5ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2409)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 3476)
+
+
+Started PATCH "/categories/1" for ::1 at 2021-04-19 20:06:35 -0400
+Processing by CategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>""}, "commit"=>"Update Category", "id"=>"1"}
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:46:in `set_category'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:32:in `update'
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = ? AND "categories"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:32:in `update'
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 29ms (ActiveRecord: 2.7ms | Allocations: 4100)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:06:35 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:46:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1052)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2681)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.4ms | Allocations: 3620)
+
+
+Started GET "/categories/1/edit" for ::1 at 2021-04-19 20:07:19 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 4.6ms | Allocations: 624)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 2353)
+Completed 200 OK in 36ms (Views: 13.1ms | ActiveRecord: 2.3ms | Allocations: 8078)
+
+
+Started PATCH "/categories/1" for ::1 at 2021-04-19 20:07:23 -0400
+Processing by CategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>""}, "commit"=>"Update Category", "id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:32:in `update'
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."name" = ? AND "categories"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:32:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 5.0ms | Allocations: 1526)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1621)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3249)
+Completed 200 OK in 40ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 7464)
+
+
+Started GET "/categories/1/edit" for ::1 at 2021-04-19 20:07:26 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 69.8ms | Allocations: 559)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 70.1ms | Allocations: 654)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 2283)
+Completed 200 OK in 84ms (Views: 77.3ms | ActiveRecord: 0.7ms | Allocations: 3222)
+
+
+Started GET "/categories/1" for ::1 at 2021-04-19 20:07:28 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  Rendered categories/show.html.erb within layouts/application (Duration: 29.2ms | Allocations: 6356)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 7985)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 2.6ms | Allocations: 8923)
+
+
