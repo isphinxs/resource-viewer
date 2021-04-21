@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     skip_before_action :require_authorization, only: [:new, :create]
 
     def show
-        current_user
+        @user = current_user
     end
 
     def new
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     end
 
     def update
-        current_user
+        @user = current_user
         if user_params[:password].blank?
             user_params.delete(:password)
             user_params.delete(:password_confirmation)
@@ -47,10 +47,6 @@ class UsersController < ApplicationController
 
     private
     
-    def current_user
-        @user = User.find_by(id: session[:user_id])
-    end
-
     def require_authorization
         return head(:forbidden) unless current_user == User.find_by(id: params[:id])
     end

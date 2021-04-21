@@ -43,10 +43,6 @@ class CategoriesController < ApplicationController
 
     private
 
-    def require_login
-        return head(:forbidden) unless session.include? :user_id
-    end
-
     def set_category
         @category = Category.find_by(id: params[:id])
     end
