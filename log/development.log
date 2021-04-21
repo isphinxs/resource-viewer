@@ -8687,3 +8687,469 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 2857)
 
 
+Started GET "/login" for ::1 at 2021-04-19 22:36:56 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2954)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 4589)
+Completed 200 OK in 26ms (Views: 22.3ms | Allocations: 5501)
+
+
+Started POST "/login" for ::1 at 2021-04-19 22:37:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 309ms (ActiveRecord: 1.6ms | Allocations: 5964)
+
+
+Started GET "/" for ::1 at 2021-04-19 22:37:00 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2576)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 3097)
+
+
+Started GET "/resources" for ::1 at 2021-04-19 22:37:03 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (1.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 5198)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 6834)
+Completed 200 OK in 49ms (Views: 28.8ms | ActiveRecord: 3.3ms | Allocations: 9603)
+
+
+Started GET "/" for ::1 at 2021-04-19 22:37:05 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 830)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2463)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 2841)
+
+
+Started GET "/organizations" for ::1 at 2021-04-19 22:37:06 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3132)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 4768)
+Completed 200 OK in 34ms (Views: 21.7ms | ActiveRecord: 2.6ms | Allocations: 6538)
+
+
+Started GET "/organizations/1" for ::1 at 2021-04-19 22:37:08 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:51:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 1], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 1]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 14.9ms | Allocations: 3601)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 5234)
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 1.6ms | Allocations: 6399)
+
+
+Started GET "/categories" for ::1 at 2021-04-19 22:37:10 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 3349)
+  Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 4985)
+Completed 200 OK in 106ms (Views: 87.7ms | ActiveRecord: 3.6ms | Allocations: 7331)
+
+
+Started GET "/categories/2" for ::1 at 2021-04-19 22:37:12 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:51:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mResource Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ? LIMIT ?[0m  [["category_id", 2], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:6
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "resource_categories" ON "resources"."id" = "resource_categories"."resource_id" WHERE "resource_categories"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:9
+  Rendered categories/show.html.erb within layouts/application (Duration: 32.8ms | Allocations: 5643)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 7276)
+Completed 200 OK in 55ms (Views: 39.9ms | ActiveRecord: 6.2ms | Allocations: 8441)
+
+
+Started GET "/resources/7" for ::1 at 2021-04-19 22:37:16 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 30.3ms | Allocations: 3960)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 5593)
+Completed 200 OK in 48ms (Views: 36.8ms | ActiveRecord: 3.0ms | Allocations: 6769)
+
+
+Started GET "/resources/7" for ::1 at 2021-04-19 22:39:08 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 17.0ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4308)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 0.9ms | Allocations: 5990)
+
+
+Started GET "/logout" for ::1 at 2021-04-19 22:39:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/resources/7" for ::1 at 2021-04-19 22:39:57 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 4447)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 1.3ms | Allocations: 6132)
+
+
+Started GET "/resources/7" for ::1 at 2021-04-19 22:40:40 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 4382)
+Completed 200 OK in 60ms (Views: 41.1ms | ActiveRecord: 2.1ms | Allocations: 6063)
+
+
+Started GET "/resources/7" for ::1 at 2021-04-19 22:40:57 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 67.6ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | Allocations: 4393)
+Completed 200 OK in 135ms (Views: 97.1ms | ActiveRecord: 0.8ms | Allocations: 6074)
+
+
+Started GET "/resources/7?method=delete&url=%2Flogout" for ::1 at 2021-04-19 22:40:59 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout", "id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 3787)
+Completed 200 OK in 33ms (Views: 24.4ms | ActiveRecord: 1.1ms | Allocations: 4729)
+
+
+Started GET "/resources/7?method=delete&url=%2Flogout" for ::1 at 2021-04-19 22:41:16 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout", "id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 37.6ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 4317)
+Completed 200 OK in 71ms (Views: 57.7ms | ActiveRecord: 0.8ms | Allocations: 5998)
+
+
+Started GET "/logout" for ::1 at 2021-04-19 22:41:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/resources/7?method=delete&url=%2Flogout" for ::1 at 2021-04-19 22:43:15 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout", "id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 36.1ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 4308)
+Completed 200 OK in 72ms (Views: 62.7ms | ActiveRecord: 0.7ms | Allocations: 5993)
+
+
+Started GET "/resources/7?method=delete&url=%2Flogout" for ::1 at 2021-04-19 22:43:18 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout", "id"=>"7"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3709)
+Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 0.6ms | Allocations: 4651)
+
+
+Started GET "/logout" for ::1 at 2021-04-19 22:43:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for ::1 at 2021-04-19 22:44:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/resources/7?method=delete&url=%2Flogout" for ::1 at 2021-04-19 22:44:12 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout", "id"=>"7"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 4314)
+Completed 200 OK in 28ms (Views: 22.3ms | ActiveRecord: 2.2ms | Allocations: 5993)
+
+
+Started GET "/resources/7?method=delete&url=%2Flogout" for ::1 at 2021-04-19 22:44:14 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout", "id"=>"7"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:61:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3716)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.7ms | Allocations: 4658)
+
+
+Started GET "/logout" for ::1 at 2021-04-19 22:44:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/rails/info/routes" for ::1 at 2021-04-19 22:46:41 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [61 times] (Duration: 65.9ms | Allocations: 6661)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 3.1ms | Allocations: 727)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 86.2ms | Allocations: 12161)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 89.6ms | Allocations: 12394)
+Completed 200 OK in 112ms (Views: 98.2ms | ActiveRecord: 0.0ms | Allocations: 13442)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-04-19 22:46:42 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [61 times] (Duration: 58.0ms | Allocations: 6414)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 67.6ms | Allocations: 10880)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 71.1ms | Allocations: 10954)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.0ms | Allocations: 11347)
+
+
+Started GET "/" for ::1 at 2021-04-19 22:47:45 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 6360)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.3ms | Allocations: 7461)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x007fed48d84d38>
+Did you mean?  current_page?):
+    16:       <%= link_to "Organizations", organizations_path %>
+    17:       <%= link_to "Categories", categories_path %>
+    18:       <% if session[:user_id] %>
+    19:         <%= link_to "Account", user_path(current_user) %>
+    20:         <%= link_to "Logout", logout_path, method: :delete %>
+    21:       <% end %>
+    22:     </div>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-04-19 22:48:04 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (21.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.2ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 3945)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 21.1ms | Allocations: 5046)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+    16:       <%= link_to "Organizations", organizations_path %>
+    17:       <%= link_to "Categories", categories_path %>
+    18:       <% if session[:user_id] %>
+    19:         <%= link_to "Account", user_path(@user) %>
+    20:         <%= link_to "Logout", logout_path, method: :delete %>
+    21:       <% end %>
+    22:     </div>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-04-21 07:58:04 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 32.5ms | Allocations: 7556)
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 12739)
+Completed 200 OK in 110ms (Views: 74.8ms | ActiveRecord: 2.1ms | Allocations: 17141)
+
+
+Started POST "/logout" for ::1 at 2021-04-21 07:58:08 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/" for ::1 at 2021-04-21 07:58:08 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 1725)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 2105)
+
+
+Started GET "/login" for ::1 at 2021-04-21 07:58:10 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 457.2ms | Allocations: 224332)
+  Rendered layout layouts/application.html.erb (Duration: 462.6ms | Allocations: 225969)
+Completed 200 OK in 469ms (Views: 467.1ms | ActiveRecord: 0.0ms | Allocations: 226875)
+
+
+Started POST "/login" for ::1 at 2021-04-21 07:58:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 332ms (ActiveRecord: 0.5ms | Allocations: 1753)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/login" for ::1 at 2021-04-21 07:58:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2097)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 3845)
+Completed 200 OK in 40ms (Views: 38.9ms | Allocations: 4459)
+
+
+Started POST "/login" for ::1 at 2021-04-21 07:58:30 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 422ms (ActiveRecord: 6.3ms | Allocations: 6753)
+
+
+Started GET "/" for ::1 at 2021-04-21 07:58:30 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 946)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2609)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 3132)
+
+
+Started GET "/logout" for ::1 at 2021-04-21 07:59:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-04-21 07:59:17 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 821)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2477)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 2854)
+
+

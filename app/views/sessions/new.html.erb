@@ -1,5 +1,5 @@
 <h1>Log In</h1>
-<%= form_with model: @user do |f| %>
+<%= form_with url: login_path do |f| %>
     <% if flash[:alert] %>
         <p><%= flash[:alert] %></p>
     <% end %>
