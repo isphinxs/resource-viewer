@@ -9153,3 +9153,110 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 2854)
 
 
+Started GET "/" for ::1 at 2021-04-21 08:01:01 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1063)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3006)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 0.3ms | Allocations: 4128)
+
+
+Started GET "/logout" for ::1 at 2021-04-21 08:01:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-04-21 08:06:19 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.1ms | Allocations: 7309)
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 14106)
+Completed 200 OK in 102ms (Views: 75.8ms | ActiveRecord: 2.3ms | Allocations: 17354)
+
+
+Started GET "/logout" for ::1 at 2021-04-21 08:06:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-04-21 08:07:00 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 25.7ms | Allocations: 1174)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 3235)
+Completed 200 OK in 103ms (Views: 85.0ms | ActiveRecord: 0.2ms | Allocations: 4448)
+
+
+Started GET "/" for ::1 at 2021-04-21 08:07:02 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 12.1ms | Allocations: 837)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 2495)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.2ms | Allocations: 2876)
+
+
+Started GET "/logout" for ::1 at 2021-04-21 08:07:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-04-21 08:09:05 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.1ms | Allocations: 6950)
+  Rendered layout layouts/application.html.erb (Duration: 75.4ms | Allocations: 8969)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 3.7ms | Allocations: 10102)
+
+
+Started GET "/" for ::1 at 2021-04-21 08:09:07 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2556)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 2935)
+
+
+Started POST "/logout" for ::1 at 2021-04-21 08:09:09 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/" for ::1 at 2021-04-21 08:09:09 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1722)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 2098)
+
+
+Started GET "/login" for ::1 at 2021-04-21 08:09:12 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 471.5ms | Allocations: 224612)
+  Rendered layout layouts/application.html.erb (Duration: 476.7ms | Allocations: 226249)
+Completed 200 OK in 483ms (Views: 481.1ms | ActiveRecord: 0.0ms | Allocations: 227155)
+
+
