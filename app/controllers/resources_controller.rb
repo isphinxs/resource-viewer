@@ -4,7 +4,8 @@ class ResourcesController < ApplicationController
     def index
         if params[:organization_id]
             # byebug
-            @resources = Organization.find_by(id: params[:organization_id]).resources
+            @organization = Organization.find_by(id: params[:organization_id])
+            @resources = @organization.resources
         else
             @resources = Resource.all
         end

@@ -1,4 +1,8 @@
-<h1>Resources Index</h1>
+<% if @organization %>
+    <h1>Resources for <%= @organization.name %></h1>
+<% else %>
+    <h1>Resources</h1>
+<% end %>
 <ul>
 <% @resources.each do |resource| %>
     <li><%= link_to resource.name, resource_path(resource) %></li>
