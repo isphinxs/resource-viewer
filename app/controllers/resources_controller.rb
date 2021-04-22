@@ -2,7 +2,12 @@ class ResourcesController < ApplicationController
     before_action :require_login
 
     def index
-        @resources = Resource.all
+        if params[:organization_id]
+            # byebug
+            @resources = Organization.find_by(id: params[:organization_id]).resources
+        else
+            @resources = Resource.all
+        end
     end
 
     def show

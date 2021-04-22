@@ -9472,3 +9472,233 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 3297)
 
 
+Started GET "/resources" for ::1 at 2021-04-22 19:24:08 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/resources"):
+  
+Started GET "/resources/new" for ::1 at 2021-04-22 19:24:19 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:57:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  Rendered resources/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1669)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 1740)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 1.0ms | Allocations: 8534)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Resource Show</h1>
+    2: <p>Name: <%= @resource.name %></p>
+    3: <p>Amount: <%= @resource.amount %></p>
+    4: <p>Link: <%= @resource.link %></p>
+    5: <p>Organization: <%= link_to @resource.organization_name, organization_path(@resource.organization) %></p>
+  
+app/views/resources/show.html.erb:2
+Started GET "/resources" for ::1 at 2021-04-22 19:24:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources"):
+  
+Started GET "/users/3" for ::1 at 2021-04-22 19:24:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 8528)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 3.5ms | Allocations: 15621)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resources_path' for #<ActionView::Base:0x007fbf5c91d228>
+Did you mean?  resource_path):
+    12:   <body>
+    13:     <div>
+    14:       <%= link_to "Home", root_path %>
+    15:       <%= link_to "Resources", resources_path %>
+    16:       <%= link_to "Organizations", organizations_path %>
+    17:       <%= link_to "Categories", categories_path %>
+    18:       <% if session[:user_id] %>
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-04-22 19:24:33 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 30.6ms | Allocations: 1092)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 6028)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.2ms | Allocations: 6959)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resources_path' for #<ActionView::Base:0x007fbf5d107880>
+Did you mean?  resource_path):
+    12:   <body>
+    13:     <div>
+    14:       <%= link_to "Home", root_path %>
+    15:       <%= link_to "Resources", resources_path %>
+    16:       <%= link_to "Organizations", organizations_path %>
+    17:       <%= link_to "Categories", categories_path %>
+    18:       <% if session[:user_id] %>
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-04-22 19:25:41 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.4ms | Allocations: 7559)
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 14049)
+Completed 200 OK in 107ms (Views: 68.4ms | ActiveRecord: 1.7ms | Allocations: 16962)
+
+
+Started GET "/resources" for ::1 at 2021-04-22 19:25:44 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 5456)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 7185)
+Completed 200 OK in 47ms (Views: 24.8ms | ActiveRecord: 4.0ms | Allocations: 10576)
+
+
+Started GET "/resources/1" for ::1 at 2021-04-22 19:25:46 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:57:in `set_resource'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:21:in `organization_name'
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 1]]
+  ↳ app/views/resources/show.html.erb:9
+  Rendered resources/show.html.erb within layouts/application (Duration: 135.2ms | Allocations: 16168)
+  Rendered layout layouts/application.html.erb (Duration: 149.7ms | Allocations: 17899)
+Completed 200 OK in 161ms (Views: 141.8ms | ActiveRecord: 10.3ms | Allocations: 19103)
+
+
+Started GET "/organizations/2" for ::1 at 2021-04-22 19:25:50 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 2], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 2]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 52.2ms | Allocations: 3043)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 4770)
+Completed 200 OK in 85ms (Views: 74.0ms | ActiveRecord: 1.6ms | Allocations: 6393)
+
+
+Started GET "/organizations/2/resources" for ::1 at 2021-04-22 19:25:54 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"organization_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 2681)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.3ms | Allocations: 3086)
+
+
+Started GET "/organizations/2/resources" for ::1 at 2021-04-22 19:29:01 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:6:in `index'
+  [1m[36mResource Load (1.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 4.5ms | Allocations: 10092)
+
+
+  
+NoMethodError (undefined method `resources' for #<Resource:0x00007ff552142b58>
+Did you mean?  rescue):
+  
+app/controllers/resources_controller.rb:6:in `index'
+Started GET "/organizations/2/resources" for ::1 at 2021-04-22 19:29:18 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:7:in `index'
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 24655ms (ActiveRecord: 31.9ms | Allocations: 59221)
+
+
+  
+NoMethodError (undefined method `resources' for #<Resource:0x00007ff55227ea58>
+Did you mean?  rescue):
+  
+app/controllers/resources_controller.rb:7:in `index'
+Started GET "/organizations/2/resources" for ::1 at 2021-04-22 19:29:45 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:7:in `index'
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."organization_id" = ? LIMIT ?[0m  [["organization_id", "2"], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.3ms | Allocations: 3830)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: organizations.organization_id):
+  
+app/controllers/resources_controller.rb:7:in `index'
+Started GET "/organizations/2/resources" for ::1 at 2021-04-22 19:30:01 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:7:in `index'
+  [1m[36mOrganization Load (7.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (4.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 2]]
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 5773)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 7621)
+Completed 200 OK in 105ms (Views: 49.3ms | ActiveRecord: 17.1ms | Allocations: 15066)
+
+
+Started GET "/resources" for ::1 at 2021-04-22 19:30:08 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/views/resources/index.html.erb:3
+  Rendered resources/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2681)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 1.3ms | Allocations: 3088)
+
+
+Started GET "/organizations" for ::1 at 2021-04-22 19:30:12 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1063)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 2792)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.2ms | Allocations: 3503)
+
+
