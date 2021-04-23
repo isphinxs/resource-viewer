@@ -10506,3 +10506,139 @@ Processing by ResourcesController#show as HTML
 Completed 200 OK in 519ms (Views: 444.8ms | ActiveRecord: 8.2ms | Allocations: 3136267)
 
 
+Started GET "/organizations/1" for ::1 at 2021-04-22 20:33:23 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (2.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 1], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (2.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 1]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 215.9ms | Allocations: 1536563)
+  Rendered layout layouts/application.html.erb (Duration: 223.4ms | Allocations: 1592865)
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 7.4ms | Allocations: 2447275)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"resources", :id=>"1"}, missing required keys: [:organization_id]):
+    11:     <% end %>
+    12: <% end %>
+    13: </ul>
+    14: <%= link_to "Add a New Resource", new_organization_resource_path %>
+    15: 
+    16: <%= link_to "New", new_organization_path %>
+    17: <%= link_to "Edit", edit_organization_path(@organization) %>
+  
+app/views/organizations/show.html.erb:14
+Started GET "/rails/info/routes" for ::1 at 2021-04-22 20:33:52 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [69 times] (Duration: 692.2ms | Allocations: 4747928)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 15.5ms | Allocations: 154764)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 1118.5ms | Allocations: 8430009)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 1130.0ms | Allocations: 8528129)
+Completed 200 OK in 1228ms (Views: 1176.0ms | ActiveRecord: 0.0ms | Allocations: 8996583)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-04-22 20:33:54 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [69 times] (Duration: 606.8ms | Allocations: 4710057)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/actionpack-6.1.3.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 10.2ms | Allocations: 99970)
+  Rendered /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 1230.9ms | Allocations: 8229305)
+  Rendered layout /Users/samo/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/layouts/application.html.erb (Duration: 1247.3ms | Allocations: 8298339)
+Completed 200 OK in 1298ms (Views: 1270.6ms | ActiveRecord: 0.0ms | Allocations: 8604829)
+
+
+Started GET "/organizations" for ::1 at 2021-04-22 20:34:18 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (3.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 186.8ms | Allocations: 759148)
+  Rendered layout layouts/application.html.erb (Duration: 318.0ms | Allocations: 1614461)
+Completed 200 OK in 414ms (Views: 359.4ms | ActiveRecord: 3.3ms | Allocations: 2101586)
+
+
+Started GET "/organizations" for ::1 at 2021-04-22 20:34:19 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (3.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 104.7ms | Allocations: 728288)
+  Rendered layout layouts/application.html.erb (Duration: 210.5ms | Allocations: 1527026)
+Completed 200 OK in 250ms (Views: 220.5ms | ActiveRecord: 3.3ms | Allocations: 1828629)
+
+
+Started GET "/organizations/1" for ::1 at 2021-04-22 20:34:21 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (3.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (14.0ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 1], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (2.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 1]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 265.4ms | Allocations: 1728567)
+  Rendered layout layouts/application.html.erb (Duration: 375.6ms | Allocations: 2520038)
+Completed 200 OK in 505ms (Views: 384.8ms | ActiveRecord: 19.2ms | Allocations: 3245850)
+
+
+Started GET "/organizations/1" for ::1 at 2021-04-22 20:34:43 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 1], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (2.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 1]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 405.5ms | Allocations: 1724909)
+  Rendered layout layouts/application.html.erb (Duration: 549.6ms | Allocations: 2581276)
+Completed 200 OK in 688ms (Views: 593.0ms | ActiveRecord: 6.5ms | Allocations: 3459748)
+
+
+Started GET "/organizations/1/resources/new" for ::1 at 2021-04-22 20:34:49 -0400
+Processing by ResourcesController#new as HTML
+  Parameters: {"organization_id"=>"1"}
+  [1m[36mOrganization Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:19:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/new.html.erb within layouts/application
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/resources/_form.html.erb:29
+  [1m[36mCategory Load (4.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/resources/_form.html.erb:44
+  Rendered resources/_form.html.erb (Duration: 550.6ms | Allocations: 3637544)
+  Rendered resources/new.html.erb within layouts/application (Duration: 585.3ms | Allocations: 3784896)
+  Rendered layout layouts/application.html.erb (Duration: 756.9ms | Allocations: 4576367)
+Completed 200 OK in 948ms (Views: 821.4ms | ActiveRecord: 8.5ms | Allocations: 5522476)
+
+
+Started GET "/organizations/1" for ::1 at 2021-04-22 20:34:54 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (3.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 1], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (2.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ?[0m  [["organization_id", 1]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 302.3ms | Allocations: 1669145)
+  Rendered layout layouts/application.html.erb (Duration: 417.7ms | Allocations: 2460616)
+Completed 200 OK in 539ms (Views: 428.4ms | ActiveRecord: 10.6ms | Allocations: 3149097)
+
+
