@@ -16,12 +16,17 @@ class ResourcesController < ApplicationController
     end
 
     def new
-        @resource = Resource.new
-        @categories = Category.all
-        @organizations = Organization.all
+        if params[:organization_id] && !Organization.exists?(params[:organization_id])
+            redirect_to organizations_path, alert: "Organization not found."
+        else
+            @resource = Resource.new(organization_id: params[:organization_id])
+            @categories = Category.all
+            @organizations = Organization.all
+        end
     end
     
     def create
+        # byebug
         @resource = Resource.new(resource_params)
         if @resource.valid?
             @resource.save

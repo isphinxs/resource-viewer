@@ -19,6 +19,9 @@
         <%= button_to "Logout", logout_path %>
       <% end %>
     </div>
+    <% if flash[:alert] %>
+      <p><%= flash[:alert] %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

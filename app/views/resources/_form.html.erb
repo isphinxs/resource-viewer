@@ -26,13 +26,17 @@
 
     <div>
         <h3>Organization</h3>
-        <%= f.collection_select :organization_id, organizations, :id, :name, include_hidden: false %>
-        <br>
-        <label for="resource_organization_name">New Organization</label>
-        <%= f.fields_for :organization, resource.build_organization do |organization_fields| %>
-            <%= organization_fields.text_field :name %>
+        <% if resource.organization %>
+            <p><%= resource.organization.name %></p>
+            <%= f.hidden_field :organization_id %>
+        <% else %>
+            <%= f.collection_select :organization_id, organizations, :id, :name, include_hidden: false %>
+            <br>
+            <label for="resource_organization_name">New Organization</label>
+            <%= f.fields_for :organization, resource.build_organization do |organization_fields| %>
+                <%= organization_fields.text_field :name %>
+            <% end %>
         <% end %>
-
     </div>
 
     <div>
