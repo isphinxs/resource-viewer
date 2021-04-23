@@ -8,11 +8,12 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   post "/logout", to: "sessions#destroy"
 
+  resources :resources
+
   resources :organizations do
     resources :resources, shallow: true # new, index, create
   end
 
-  resources :resources # delete and fix paths 
   resources :categories
   resources :users, only: [:show, :edit, :update, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -27,7 +27,7 @@
     <div>
         <h3>Organization</h3>
         <% if resource.organization %>
-            <p><%= resource.organization.name %></p>
+            <p><%= resource.organization_name %></p>
             <%= f.hidden_field :organization_id %>
         <% else %>
             <%= f.collection_select :organization_id, organizations, :id, :name, include_hidden: false %>

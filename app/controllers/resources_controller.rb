@@ -16,6 +16,7 @@ class ResourcesController < ApplicationController
     end
 
     def new
+        # byebug
         if params[:organization_id] && !Organization.exists?(params[:organization_id])
             redirect_to organizations_path, alert: "Organization not found."
         else
@@ -70,5 +71,9 @@ class ResourcesController < ApplicationController
 
     def resource_params
         params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, organization_attributes: :name, category_ids: [], categories_attributes: [:name])
+    end
+
+    def organization_name
+        self.organization ? self.organization.name : nil
     end
 end
