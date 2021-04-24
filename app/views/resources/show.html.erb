@@ -11,8 +11,10 @@
     <% end %>
 </ul>
 
-<%= link_to "New", new_resource_path %>
-<%= link_to "Edit", edit_resource_path(@resource) %>
+<div class="button-group">
+<%= link_to "New", new_resource_path, class: "button" %>
+<%= link_to "Edit", edit_resource_path(@resource), class: "button" %>
 <%= form_with model: @resource, method: "delete" do |f| %>
-    <%= f.submit "Delete" %>
+    <%= f.submit "Delete", class: "button" %>
 <% end %>
+</div>
