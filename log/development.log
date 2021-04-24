@@ -13206,3 +13206,42 @@ Processing by ResourcesController#index as HTML
 Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.6ms | Allocations: 3993)
 
 
+Started POST "/logout" for ::1 at 2021-04-24 13:15:32 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (Allocations: 305)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:15:34 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 1746)
+Completed 200 OK in 60ms (Views: 58.3ms | Allocations: 2266)
+
+
+Started GET "/signup" for ::1 at 2021-04-24 13:15:36 -0400
+Processing by UsersController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 54.7ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 124.6ms | Allocations: 3131)
+Completed 200 OK in 439ms (Views: 147.1ms | ActiveRecord: 6.5ms | Allocations: 9174)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:16:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Tester", "username"=>"malt", "email"=>"malt@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (5.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "malt"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 65.6ms | Allocations: 2505)
+  Rendered layout layouts/application.html.erb (Duration: 133.9ms | Allocations: 4149)
+Completed 200 OK in 2503ms (Views: 138.4ms | ActiveRecord: 5.3ms | Allocations: 5672)
+
+
