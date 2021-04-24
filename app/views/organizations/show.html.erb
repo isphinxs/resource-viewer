@@ -6,7 +6,7 @@
 <% if @organization.resources.empty? %>
     <li>No Resources Available</li>
 <% else %>
-    <% @organization.resources.each do |resource| %>
+    <% @organization.resources.order(name: :asc).each do |resource| %>
         <li><%= link_to resource.name, resource_path(resource) %></li>
     <% end %>
 <% end %>

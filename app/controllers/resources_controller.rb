@@ -5,9 +5,9 @@ class ResourcesController < ApplicationController
         if params[:organization_id]
             # byebug
             @organization = Organization.find_by(id: params[:organization_id])
-            @resources = @organization.resources
+            @resources = @organization.resources.order(name: :asc)
         else
-            @resources = Resource.all
+            @resources = Resource.all.order(name: :asc)
         end
     end
 

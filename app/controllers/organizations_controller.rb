@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
     before_action :require_login
 
     def index
-        @organizations = Organization.all
+        @organizations = Organization.all.order(name: :asc)
     end
 
     def show
