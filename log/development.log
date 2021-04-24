@@ -13245,3 +13245,293 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 2503ms (Views: 138.4ms | ActiveRecord: 5.3ms | Allocations: 5672)
 
 
+Started GET "/" for ::1 at 2021-04-24 13:16:56 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 1733)
+Completed 200 OK in 111ms (Views: 96.9ms | ActiveRecord: 0.0ms | Allocations: 2109)
+
+
+Started GET "/login" for ::1 at 2021-04-24 13:16:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2053)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 3692)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 4211)
+
+
+Started POST "/login" for ::1 at 2021-04-24 13:17:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 3554ms (ActiveRecord: 0.6ms | Allocations: 1003)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:17:07 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 43.5ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 2669)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.4ms | Allocations: 3046)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:21:39 -0400
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 336.9ms | Allocations: 7292)
+  Rendered layout layouts/application.html.erb (Duration: 442.4ms | Allocations: 12416)
+Completed 200 OK in 609ms (Views: 471.1ms | ActiveRecord: 14.4ms | Allocations: 15204)
+
+
+Started POST "/logout" for ::1 at 2021-04-24 13:21:45 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Log Out"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:21:45 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 1737)
+Completed 200 OK in 183ms (Views: 138.1ms | ActiveRecord: 0.0ms | Allocations: 2116)
+
+
+Started GET "/signup" for ::1 at 2021-04-24 13:21:47 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1898.6ms | Allocations: 224699)
+  Rendered layout layouts/application.html.erb (Duration: 2045.8ms | Allocations: 226351)
+Completed 200 OK in 2055ms (Views: 2050.1ms | ActiveRecord: 0.0ms | Allocations: 227352)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:22:06 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"malty", "email"=>"dklfjd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "malty"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 27.6ms | Allocations: 2483)
+  Rendered layout layouts/application.html.erb (Duration: 96.3ms | Allocations: 4127)
+Completed 200 OK in 1366ms (Views: 104.0ms | ActiveRecord: 0.3ms | Allocations: 5729)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:22:20 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"malty", "email"=>"dklfjd@", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "malty"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 203.2ms | Allocations: 2417)
+  Rendered layout layouts/application.html.erb (Duration: 251.6ms | Allocations: 4067)
+Completed 200 OK in 1438ms (Views: 270.3ms | ActiveRecord: 0.4ms | Allocations: 5467)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:22:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"malty", "email"=>"dklfjd@blank", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "malty"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "malty"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (9.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Malt"], ["last_name", "Test"], ["password_digest", "$2a$12$eg6ehLeH6Dlq.xgBH7sVgOY0o0j1vNVDL5JbbmoXKGQOk97is7bfG"], ["username", "malty"], ["email", "dklfjd@blank"], ["created_at", "2021-04-24 17:22:33.156522"], ["updated_at", "2021-04-24 17:22:33.156522"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1710ms (ActiveRecord: 19.5ms | Allocations: 4257)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:22:33 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 4205)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms | Allocations: 4975)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:38:26 -0400
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 466)
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | Allocations: 5510)
+Completed 200 OK in 124ms (Views: 68.7ms | ActiveRecord: 0.0ms | Allocations: 8359)
+
+
+Started GET "/signup" for ::1 at 2021-04-24 13:38:29 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1401.0ms | Allocations: 224789)
+  Rendered layout layouts/application.html.erb (Duration: 1426.7ms | Allocations: 226441)
+Completed 200 OK in 1488ms (Views: 1434.7ms | ActiveRecord: 2.0ms | Allocations: 233132)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:38:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"asdf", "email"=>";lkj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms | Allocations: 2223)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/validators/email_validator.rb:2:in `validate'
+app/controllers/users_controller.rb:16:in `create'
+Started GET "/signup" for ::1 at 2021-04-24 13:40:07 -0400
+Processing by UsersController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 55.4ms | Allocations: 1587)
+  Rendered layout layouts/application.html.erb (Duration: 99.6ms | Allocations: 3351)
+Completed 200 OK in 252ms (Views: 121.2ms | ActiveRecord: 6.0ms | Allocations: 9817)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:40:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"asdf", "email"=>";lkj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms | Allocations: 1905)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/validators/email_validator.rb:2:in `validate'
+app/controllers/users_controller.rb:16:in `create'
+Started GET "/signup" for ::1 at 2021-04-24 13:41:04 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 1823)
+
+
+  
+SyntaxError (/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+...:message] << "is not an email")
+...                              ^):
+  
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/models/user.rb:9:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:10:in `new'
+Started GET "/signup" for ::1 at 2021-04-24 13:41:31 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (Allocations: 1842)
+
+
+  
+SyntaxError (/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+...s[:email] << "is not an email")
+...                              ^):
+  
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/models/user.rb:9:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:10:in `new'
+Started GET "/signup" for ::1 at 2021-04-24 13:43:38 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 21ms (Allocations: 1822)
+
+
+  
+SyntaxError (/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/validators/email_validator.rb:2: syntax error, unexpected ')'
+    def validate(record, )
+                         ^
+/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+...mail provided is not an email")
+...                              ^):
+  
+app/validators/email_validator.rb:2: syntax error, unexpected ')'
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:2: syntax error, unexpected ')'
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:2: syntax error, unexpected ')'
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/models/user.rb:9:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:10:in `new'
+Started GET "/signup" for ::1 at 2021-04-24 13:43:50 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 8ms (Allocations: 1844)
+
+
+  
+SyntaxError (/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+...mail provided is not an email")
+...                              ^):
+  
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/validators/email_validator.rb:4: syntax error, unexpected ')', expecting end
+app/models/user.rb:9:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:10:in `new'
+Started GET "/signup" for ::1 at 2021-04-24 13:44:02 -0400
+Processing by UsersController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1483)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3135)
+Completed 200 OK in 37ms (Views: 10.2ms | ActiveRecord: 3.9ms | Allocations: 9353)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:44:15 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"asfd", "email"=>";lkj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asfd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 36.0ms | Allocations: 3711)
+  Rendered layout layouts/application.html.erb (Duration: 203.2ms | Allocations: 5355)
+Completed 200 OK in 216ms (Views: 204.3ms | ActiveRecord: 0.3ms | Allocations: 6872)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:44:30 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Malt", "last_name"=>"Test", "username"=>"asfd", "email"=>";lkj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asfd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 130.6ms | Allocations: 3648)
+  Rendered layout layouts/application.html.erb (Duration: 176.3ms | Allocations: 5298)
+Completed 200 OK in 296ms (Views: 178.2ms | ActiveRecord: 10.2ms | Allocations: 12598)
+
+
