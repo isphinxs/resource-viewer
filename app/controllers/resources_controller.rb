@@ -1,8 +1,9 @@
 class ResourcesController < ApplicationController
     before_action :require_login
+    helper_method :nested_resource?
 
     def index
-        if params[:organization_id]
+        if nested_resource?
             # byebug
             @organization = Organization.find_by(id: params[:organization_id])
             @resources = @organization.resources.order(name: :asc)
@@ -17,7 +18,7 @@ class ResourcesController < ApplicationController
 
     def new
         # byebug
-        if params[:organization_id] && !Organization.exists?(params[:organization_id])
+        if nested_resource? && !Organization.exists?(params[:organization_id])
             redirect_to organizations_path, alert: "Organization not found."
         else
             @resource = Resource.new(organization_id: params[:organization_id])
@@ -64,6 +65,10 @@ class ResourcesController < ApplicationController
     end
 
     private
+    
+    def nested_resource?
+        params[:organization_id]
+    end
 
     def set_resource
         @resource = Resource.find_by(id: params[:id])
