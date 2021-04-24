@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
     before_action :require_login
 
     def index
-        @categories = Category.all.order(name: :asc)
+        @categories = Category.alphabetical
     end
 
     def show

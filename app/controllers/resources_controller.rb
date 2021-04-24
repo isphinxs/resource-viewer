@@ -6,9 +6,9 @@ class ResourcesController < ApplicationController
         if nested_resource?
             # byebug
             @organization = Organization.find_by(id: params[:organization_id])
-            @resources = @organization.resources.order(name: :asc)
+            @resources = @organization.resources.alphabetical
         else
-            @resources = Resource.all.order(name: :asc)
+            @resources = Resource.alphabetical
         end
     end
 
@@ -22,8 +22,8 @@ class ResourcesController < ApplicationController
             redirect_to organizations_path, alert: "Organization not found."
         else
             @resource = Resource.new(organization_id: params[:organization_id])
-            @categories = Category.all.order(name: :asc)
-            @organizations = Organization.all.order(name: :asc)
+            @categories = Category.alphabetical
+            @organizations = Organization.alphabetical
         end
     end
     
@@ -43,8 +43,8 @@ class ResourcesController < ApplicationController
     def edit
         set_resource
         # @category = self.categories.build
-        @categories = Category.all.order(name: :asc)
-        @organizations = Organization.all.order(name: :asc)
+        @categories = Category.alphabetical
+        @organizations = Organization.alphabetical
     end
     
     def update

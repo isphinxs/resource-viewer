@@ -12975,3 +12975,234 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 29ms (Views: 18.5ms | ActiveRecord: 1.6ms | Allocations: 5593)
 
 
+Started GET "/categories" for ::1 at 2021-04-24 13:05:24 -0400
+Processing by CategoriesController#index as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 2ms (Allocations: 280)
+
+
+Started POST "/signup" for ::1 at 2021-04-24 13:05:32 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Test", "last_name"=>"Testy", "username"=>"dkdk", "email"=>"dkdkd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dkdk"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2479)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4128)
+Completed 200 OK in 61ms (Views: 23.7ms | ActiveRecord: 3.5ms | Allocations: 10625)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:05:36 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 1746)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 2266)
+
+
+Started GET "/login" for ::1 at 2021-04-24 13:05:38 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2267)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3906)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 4808)
+
+
+Started POST "/login" for ::1 at 2021-04-24 13:05:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"sammy", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sammy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 305ms (ActiveRecord: 0.3ms | Allocations: 1001)
+
+
+Started GET "/" for ::1 at 2021-04-24 13:05:42 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:5
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2680)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 3058)
+
+
+Started GET "/categories" for ::1 at 2021-04-24 13:05:44 -0400
+Processing by CategoriesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1192)
+
+
+  
+SyntaxError (/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/models/category.rb:7: syntax error, unexpected ->, expecting end
+    scope :alpha -> { order("name") }
+                 ^~):
+  
+app/models/category.rb:7: syntax error, unexpected ->, expecting end
+app/models/category.rb:7: syntax error, unexpected ->, expecting end
+app/models/category.rb:7: syntax error, unexpected ->, expecting end
+app/controllers/categories_controller.rb:5:in `index'
+Started GET "/categories" for ::1 at 2021-04-24 13:06:07 -0400
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/category.rb:7:in `block in <class:Category>'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 3605)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 5347)
+Completed 200 OK in 57ms (Views: 29.1ms | ActiveRecord: 3.4ms | Allocations: 8579)
+
+
+Started GET "/resources" for ::1 at 2021-04-24 13:07:03 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY "resources"."name" ASC[0m
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4672)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 6413)
+Completed 200 OK in 45ms (Views: 24.4ms | ActiveRecord: 2.3ms | Allocations: 10216)
+
+
+Started GET "/resources/new" for ::1 at 2021-04-24 13:07:05 -0400
+Processing by ResourcesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/new.html.erb within layouts/application
+  [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY "organizations"."name" ASC[0m
+  ↳ app/views/resources/_form.html.erb:33
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/resources/_form.html.erb:44
+  Rendered resources/_form.html.erb (Duration: 62.7ms | Allocations: 13095)
+  Rendered resources/new.html.erb within layouts/application (Duration: 63.1ms | Allocations: 13193)
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 14925)
+Completed 200 OK in 88ms (Views: 64.6ms | ActiveRecord: 6.3ms | Allocations: 17996)
+
+
+Started GET "/resources" for ::1 at 2021-04-24 13:07:11 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY "resources"."name" ASC[0m
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1006)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2739)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 3171)
+
+
+Started GET "/organizations" for ::1 at 2021-04-24 13:07:37 -0400
+Processing by OrganizationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/organization.rb:5:in `block in <class:Organization>'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (1.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3241)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 4983)
+Completed 200 OK in 35ms (Views: 21.2ms | ActiveRecord: 3.2ms | Allocations: 7255)
+
+
+Started GET "/resources" for ::1 at 2021-04-24 13:08:23 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/resources_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY "resources"."name" ASC[0m
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 4672)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 6416)
+Completed 200 OK in 44ms (Views: 27.8ms | ActiveRecord: 4.2ms | Allocations: 10219)
+
+
+Started GET "/resources/new" for ::1 at 2021-04-24 13:08:26 -0400
+Processing by ResourcesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/new.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/resources/_form.html.erb:33
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/resources/_form.html.erb:44
+  Rendered resources/_form.html.erb (Duration: 39.8ms | Allocations: 13373)
+  Rendered resources/new.html.erb within layouts/application (Duration: 40.3ms | Allocations: 13471)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 15203)
+Completed 200 OK in 69ms (Views: 51.2ms | ActiveRecord: 4.0ms | Allocations: 17987)
+
+
+Started GET "/organizations" for ::1 at 2021-04-24 13:09:25 -0400
+Processing by OrganizationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/organization.rb:5:in `block in <class:Organization>'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3202)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 4943)
+Completed 200 OK in 25ms (Views: 16.7ms | ActiveRecord: 2.0ms | Allocations: 7150)
+
+
+Started GET "/organizations/9" for ::1 at 2021-04-24 13:09:27 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 9], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  Rendered organizations/show.html.erb within layouts/application (Duration: 28.5ms | Allocations: 4276)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 6008)
+Completed 200 OK in 43ms (Views: 32.7ms | ActiveRecord: 2.7ms | Allocations: 7051)
+
+
+Started GET "/organizations" for ::1 at 2021-04-24 13:09:29 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 898)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2631)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 3061)
+
+
+Started GET "/organizations/1" for ::1 at 2021-04-24 13:09:31 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (2.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 1], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ? ORDER BY "resources"."name" ASC[0m  [["organization_id", 1]]
+  ↳ app/views/organizations/show.html.erb:9
+  Rendered organizations/show.html.erb within layouts/application (Duration: 118.0ms | Allocations: 6317)
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 8051)
+Completed 200 OK in 137ms (Views: 129.0ms | ActiveRecord: 3.5ms | Allocations: 8990)
+
+
+Started GET "/organizations/1/resources" for ::1 at 2021-04-24 13:09:34 -0400
+Processing by ResourcesController#index as HTML
+  Parameters: {"organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ? ORDER BY name[0m  [["organization_id", 1]]
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 2684)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.6ms | Allocations: 3993)
+
+

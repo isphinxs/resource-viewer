@@ -8,6 +8,8 @@ class Resource < ApplicationRecord
   validates :name, :amount, :link, :description, presence: true
   validates :name, uniqueness: true, on: :create
 
+  scope :alphabetical, -> { order("name") }
+  
   def categories_attributes=(categories_attributes)
     categories_attributes.values.each do |category_attribute|
       if !category_attribute[:name].blank?

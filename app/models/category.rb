@@ -3,4 +3,6 @@ class Category < ApplicationRecord
     has_many :resources, through: :resource_categories
 
     validates :name, presence: :true, uniqueness: true
+
+    scope :alphabetical, -> { order("name") }
 end
