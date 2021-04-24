@@ -57,3 +57,5 @@ build-iPhoneSimulator/
 # .rubocop-https?--*
 
 /config/master.key
+/db/*.sqlite3
+/db/*.sqlite3-*
