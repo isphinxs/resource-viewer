@@ -21,8 +21,8 @@ class ResourcesController < ApplicationController
             redirect_to organizations_path, alert: "Organization not found."
         else
             @resource = Resource.new(organization_id: params[:organization_id])
-            @categories = Category.all
-            @organizations = Organization.all
+            @categories = Category.all.order(name: :asc)
+            @organizations = Organization.all.order(name: :asc)
         end
     end
     
@@ -42,8 +42,8 @@ class ResourcesController < ApplicationController
     def edit
         set_resource
         # @category = self.categories.build
-        @categories = Category.all
-        @organizations = Organization.all
+        @categories = Category.all.order(name: :asc)
+        @organizations = Organization.all.order(name: :asc)
     end
     
     def update
