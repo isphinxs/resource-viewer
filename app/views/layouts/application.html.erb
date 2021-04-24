@@ -1,27 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Financial Resources for Writers</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div>
-      <%= link_to "Home", root_path %>
-      <%= link_to "Resources", resources_path %>
-      <%= link_to "Organizations", organizations_path %>
-      <%= link_to "Categories", categories_path %>
-      <% if session[:user_id] %>
-        <%= button_to "Logout", logout_path %>
-      <% end %>
-    </div>
+    <header>
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="menu">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Resources", resources_path %></li>
+            <li><%= link_to "Organizations", organizations_path %></li>
+            <li><%= link_to "Categories", categories_path %></li>
+            <% if session[:user_id] %>
+              <li><%= button_to "Logout", logout_path %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><%= link_to "GitHub", "https://github.com/isphinxs/resource-viewer" %>
+            <li><%= link_to "Medium", "/" %></li>
+            <li><%= link_to "YouTube", "/" %></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <% if flash[:alert] %>
       <p><%= flash[:alert] %></p>
     <% end %>
     <%= yield %>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
