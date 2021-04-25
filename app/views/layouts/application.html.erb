@@ -39,7 +39,9 @@
       </div>
     </header>
     <% if flash[:alert] %>
-      <p><%= flash[:alert] %></p>
+      <div class="callout warning">
+        <p><%= flash[:alert] %></p>
+      </div>
     <% end %>
     <%= yield %>
     <script src="js/vendor/jquery.js"></script>
