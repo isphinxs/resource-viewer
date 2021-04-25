@@ -14,29 +14,63 @@
  *= require_self
  */
 
- ul {
-     list-style-type: none;
- }
+body {
+    background-color: #C7EFCF;
+    color: #190E4F;
+}
 
- .button {
+h1, h3, .top-bar a {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+h1, .top-bar a {
+    font-weight: 800;
+}
+
+p, li, a, .button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-bar, .top-bar a, ul.menu {
+    background-color: #FE5F55;
+    color: #EEF5DB;
+}
+
+.top-bar a:hover {
+    background-color: #E63462;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.button {
     min-width: 200px;
- }
+}
 
- .log-in-form {
+.button:hover {
+    background-color: #E63462;
+}
+
+.log-in-form {
     border: 1px solid lightgrey;
     padding: 1rem;
     border-radius: 0;
-  }
+    color: #E63462;
+    background-color: #F8FBEF;
+}
 
-  .form {
+.form {
     padding: 2rem;
     border-radius: 0;
-  }
+}
 
-  .grid-container {
-      padding: 3rem;
-  }
+.grid-container {
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: #EEF5DB;
+}
 
-  .hero-section {
-      text-align: center;
-  }
+.hero-section {
+    text-align: center;
+}
