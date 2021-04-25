@@ -18552,3 +18552,585 @@ Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:42:55 -0400
   
 ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
   
+Started GET "/" for ::1 at 2021-04-24 23:44:27 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2410)
+Completed 200 OK in 21ms (Views: 16.2ms | Allocations: 3532)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:44:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:44:27 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:44:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/login" for ::1 at 2021-04-24 23:44:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2341)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4017)
+Completed 200 OK in 16ms (Views: 15.0ms | Allocations: 4922)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:44:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:44:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:44:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/" for ::1 at 2021-04-24 23:44:34 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1774)
+Completed 200 OK in 5ms (Views: 3.9ms | Allocations: 2152)
+
+
+Started GET "/signup" for ::1 at 2021-04-24 23:44:36 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1952)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3628)
+Completed 200 OK in 22ms (Views: 19.7ms | Allocations: 4549)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:44:36 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:44:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:44:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:44:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:44:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/signup" for ::1 at 2021-04-24 23:45:37 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1893)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3988)
+Completed 200 OK in 23ms (Views: 21.3ms | Allocations: 5134)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:45:37 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:45:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:45:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:45:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:45:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/signup" for ::1 at 2021-04-24 23:46:04 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1479)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1550)
+Completed 500 Internal Server Error in 19ms (Allocations: 2680)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="grid-container">
+    <%= form_with model: @user, url: signup_path do |f| %>
+        <h1>Sign Up</h1>
+        <% if @user.errors.any? %>
+            <div id="error_explanation">
+                <h2>There were some errors:</h2>
+                <ul>
+                    <% @user.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+        <br>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+        <br>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        <br>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+        <br>
+        <%= f.submit, class: "button" %>
+    <% end %>
+</div>
+
+<div class="text-center">
+    <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+</div>
+):
+1:    <div class="grid-container">
+2:        <%= form_with model: @user, url: signup_path do |f| %>
+3:            <h1>Sign Up</h1>
+4:            <% if @user.errors.any? %>
+5:                <div id="error_explanation">
+6:                    <h2>There were some errors:</h2>
+7:                    <ul>
+8:                        <% @user.errors.full_messages.each do |message| %>
+9:                            <li><%= message %></li>
+10:                        <% end %>
+11:                    </ul>
+12:                </div>
+13:            <% end %>
+14:            <%= f.label :first_name %>
+15:            <%= f.text_field :first_name %>
+16:            <br>
+17:            <%= f.label :last_name %>
+18:            <%= f.text_field :last_name %>
+19:            <br>
+20:            <%= f.label :username %>
+21:            <%= f.text_field :username %>
+22:            <br>
+23:            <%= f.label :email %>
+24:            <%= f.text_field :email %>
+25:            <br>
+26:            <%= f.label :password %>
+27:            <%= f.password_field :password %>
+28:            <br>
+29:            <%= f.label :password_confirmation %>
+30:            <%= f.password_field :password_confirmation %>
+31:            <br>
+32:            <%= f.submit, class: "button" %>
+33:        <% end %>
+34:    </div>
+35:    
+36:    <div class="text-center">
+37:        <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+38:    </div>
+  
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+Started GET "/signup" for ::1 at 2021-04-24 23:46:31 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1478)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1549)
+Completed 500 Internal Server Error in 49ms (Allocations: 2674)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="grid-container">
+    <%= form_with model: @user, url: signup_path do |f| %>
+        <h1>Sign Up</h1>
+        <% if @user.errors.any? %>
+            <div id="error_explanation">
+                <h2>There were some errors:</h2>
+                <ul>
+                    <% @user.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+        <br>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+        <br>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        <br>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+        <br>
+        <%= f.submit, class: "button" %>
+    <% end %>
+</div>
+
+<div class="text-center">
+    <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+</div>
+):
+1:    <div class="grid-container">
+2:        <%= form_with model: @user, url: signup_path do |f| %>
+3:            <h1>Sign Up</h1>
+4:            <% if @user.errors.any? %>
+5:                <div id="error_explanation">
+6:                    <h2>There were some errors:</h2>
+7:                    <ul>
+8:                        <% @user.errors.full_messages.each do |message| %>
+9:                            <li><%= message %></li>
+10:                        <% end %>
+11:                    </ul>
+12:                </div>
+13:            <% end %>
+14:            <%= f.label :first_name %>
+15:            <%= f.text_field :first_name %>
+16:            <br>
+17:            <%= f.label :last_name %>
+18:            <%= f.text_field :last_name %>
+19:            <br>
+20:            <%= f.label :username %>
+21:            <%= f.text_field :username %>
+22:            <br>
+23:            <%= f.label :email %>
+24:            <%= f.text_field :email %>
+25:            <br>
+26:            <%= f.label :password %>
+27:            <%= f.password_field :password %>
+28:            <br>
+29:            <%= f.label :password_confirmation %>
+30:            <%= f.password_field :password_confirmation %>
+31:            <br>
+32:            <%= f.submit, class: "button" %>
+33:        <% end %>
+34:    </div>
+35:    
+36:    <div class="text-center">
+37:        <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+38:    </div>
+  
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+Started GET "/signup" for ::1 at 2021-04-24 23:47:10 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1547)
+Completed 500 Internal Server Error in 34ms (Allocations: 2672)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="grid-container">
+<%= form_with model: @user, url: signup_path do |f| %>
+    <h1>Sign Up</h1>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <br>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <br>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <br>
+    <%= f.submit, class: "button" %>
+<% end %>
+</div>
+
+<div class="text-center">
+    <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+</div>
+):
+1:    <div class="grid-container">
+2:    <%= form_with model: @user, url: signup_path do |f| %>
+3:        <h1>Sign Up</h1>
+4:        <% if @user.errors.any? %>
+5:            <div id="error_explanation">
+6:                <h2>There were some errors:</h2>
+7:                <ul>
+8:                    <% @user.errors.full_messages.each do |message| %>
+9:                        <li><%= message %></li>
+10:                    <% end %>
+11:                </ul>
+12:            </div>
+13:        <% end %>
+14:        <%= f.label :first_name %>
+15:        <%= f.text_field :first_name %>
+16:        <br>
+17:        <%= f.label :last_name %>
+18:        <%= f.text_field :last_name %>
+19:        <br>
+20:        <%= f.label :username %>
+21:        <%= f.text_field :username %>
+22:        <br>
+23:        <%= f.label :email %>
+24:        <%= f.text_field :email %>
+25:        <br>
+26:        <%= f.label :password %>
+27:        <%= f.password_field :password %>
+28:        <br>
+29:        <%= f.label :password_confirmation %>
+30:        <%= f.password_field :password_confirmation %>
+31:        <br>
+32:        <%= f.submit, class: "button" %>
+33:    <% end %>
+34:    </div>
+35:    
+36:    <div class="text-center">
+37:        <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+38:    </div>
+  
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+app/views/users/new.html.erb:32: syntax error, unexpected tLABEL, expecting '='
+Started GET "/signup" for ::1 at 2021-04-24 23:47:17 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1898)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 3993)
+Completed 200 OK in 55ms (Views: 49.6ms | Allocations: 5138)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:47:17 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:47:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:47:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:47:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:47:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/signup" for ::1 at 2021-04-24 23:47:40 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1786)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 3881)
+Completed 200 OK in 40ms (Views: 29.6ms | Allocations: 5026)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:47:40 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:47:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:47:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:47:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:47:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/signup" for ::1 at 2021-04-24 23:48:24 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1792)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 3887)
+Completed 200 OK in 33ms (Views: 31.0ms | Allocations: 5035)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:48:25 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/signup" for ::1 at 2021-04-24 23:48:49 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1793)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 3888)
+Completed 200 OK in 36ms (Views: 33.5ms | Allocations: 5033)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:48:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/" for ::1 at 2021-04-24 23:48:53 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1994)
+Completed 200 OK in 14ms (Views: 11.5ms | Allocations: 2897)
+
+
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:48:53 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/login" for ::1 at 2021-04-24 23:48:54 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2340)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4017)
+Completed 200 OK in 22ms (Views: 20.6ms | Allocations: 4916)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:48:54 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:54 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/" for ::1 at 2021-04-24 23:48:58 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1774)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 2151)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:48:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:48:59 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:48:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  

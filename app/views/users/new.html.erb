@@ -1,5 +1,6 @@
-<h1>Sign Up</h1>
-<%= form_with model: @user, url: signup_path do |f| %>
+<div class="grid-container">
+<%= form_with model: @user, url: signup_path, html: { class: "log-in-form" } do |f| %>
+    <h1 class="text-center">Sign Up</h1>
     <% if @user.errors.any? %>
         <div id="error_explanation">
             <h2>There were some errors:</h2>
@@ -28,7 +29,10 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
     <br>
-    <%= f.submit %>
+    <%= f.submit "Sign Up", class: "button" %>
 <% end %>
+</div>
 
-<%= link_to "Sign Up with Google", "/auth/google_oauth2" %>
+<div class="text-center">
+    <%= link_to "Sign Up with Google", "/auth/google_oauth2", class: "button" %>
+</div>
