@@ -8,7 +8,7 @@
             <li><%= link_to resource.name, resource_path(resource) %></li>
         <% end %>
     <% end %>
-    <li><%= link_to "Add a New Resource", new_organization_resource_path(@organization) %></li>
+    <li><i class="fas fa-paperclip"></i> <%= link_to "Add a New Resource", new_organization_resource_path(@organization) %></li>
 </ul>
 
 <div class="button-group">
