@@ -1,17 +1,15 @@
-<h1>Organization Show</h1>
-<p><%= @organization.name %></p>
-
-<h2><%= link_to "Available Resources", organization_resources_path(@organization) %></h2>
+<h1 class="text-center">Organization: <%= @organization.name %></h1>
+<h3><%= link_to "Available Resources", organization_resources_path(@organization) %></h3>
 <ul>
-<% if @organization.resources.empty? %>
-    <li>No Resources Available</li>
-<% else %>
-    <% @organization.resources.order(name: :asc).each do |resource| %>
-        <li><%= link_to resource.name, resource_path(resource) %></li>
+    <% if @organization.resources.empty? %>
+        <li>No Resources Available</li>
+    <% else %>
+        <% @organization.resources.order(name: :asc).each do |resource| %>
+            <li><%= link_to resource.name, resource_path(resource) %></li>
+        <% end %>
     <% end %>
-<% end %>
+    <li><%= link_to "Add a New Resource", new_organization_resource_path(@organization) %></li>
 </ul>
-<p><%= link_to "Add a New Resource", new_organization_resource_path(@organization) %></p>
 
 <div class="button-group">
     <%= link_to "New", new_organization_path, class: "button" %>

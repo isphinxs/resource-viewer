@@ -1,5 +1,4 @@
-<h1>Resource Show</h1>
-<p>Name: <%= @resource.name %></p>
+<h1 class="text-center">Resource: <%= @resource.name %></h1>
 <p>Amount: <%= @resource.amount %></p>
 <p>Link: <%= @resource.link %></p>
 <p>Organization: <%= link_to @resource.organization_name, organization_path(@resource.organization) %></p>

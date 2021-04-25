@@ -4,10 +4,14 @@
     <h1 class="text-center">Funding Resources</h1>
 <% end %>
 <ul>
-<p>The following resources are available.</p>
-<% @resources.each do |resource| %>
-    <li><%= link_to resource.name, resource_path(resource) %></li>
+<% if @resources.nil? %>
+    <p>No resources are available.</p>
+<% else %>
+    <p>The following resources are available.</p>
+    <% @resources.each do |resource| %>
+        <li><%= link_to resource.name, resource_path(resource) %></li>
+    <% end %>
+    </ul>
 <% end %>
-</ul>
 
 <%= link_to "Add New Resource", new_resource_path, class: "button" %>

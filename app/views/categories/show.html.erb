@@ -1,7 +1,5 @@
-<h1>Category Show</h1>
-<p><%= @category.name %></p>
-
-<h2>Available Resources</h2>
+<h1 class="text-center">Category: <%= @category.name %></h1>
+<h3>Available Resources</h3>
 <ul>
 <% if @category.resources.empty? %>
     <li>No Resources Available</li>
