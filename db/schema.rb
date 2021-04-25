@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_24_200525) do
+ActiveRecord::Schema.define(version: 2021_04_25_192854) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_04_24_200525) do
 
   create_table "resources", force: :cascade do |t|
     t.string "name"
-    t.string "amount"
+    t.decimal "amount"
     t.string "link"
     t.text "description"
     t.integer "organization_id", null: false

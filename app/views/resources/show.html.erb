@@ -1,5 +1,5 @@
 <h1 class="text-center"><i class="fas fa-paperclip"></i> Resource: <%= @resource.name %></h1>
-<p>Amount: <%= @resource.amount %></p>
+<p>Amount: <%= number_to_currency(@resource.amount, unit: "$", precision: 0) %></p>
 <p>Link: <%= link_to @resource.link, @resource.link %></p>
 <p>Organization: <%= link_to @resource.organization_name, organization_path(@resource.organization) %></p>
 <p>Description: <%= @resource.description %></p>
