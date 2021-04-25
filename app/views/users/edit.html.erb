@@ -1,5 +1,5 @@
-<h1>Edit Account</h1>
-<%= form_with model: @user do |f| %>
+<%= form_with model: @user, html: { class: "form" } do |f| %>
+    <h1 class="text-center">Edit Account</h1>
     <% if @user.errors.any? %>
         <div id="error_explanation">
             <h2>There were some errors:</h2>
@@ -22,9 +22,10 @@
     <%= f.label :email %>
     <%= f.text_field :email %>
     <br>
-    <%= f.submit %>
-<% end %>
-
-<%= form_with model: @user, method: "delete" do |f| %>
-    <%= f.submit "Delete Account" %>
+    <div class="button-group">
+        <%= f.submit "Update Account", class: "button" %>
+        <%= form_with model: @user, method: "delete" do |f| %>
+            <%= f.submit "Delete Account", class: "button" %>
+        <% end %>
+    </div>
 <% end %>
