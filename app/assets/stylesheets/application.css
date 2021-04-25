@@ -28,6 +28,11 @@
     border-radius: 0;
   }
 
+  .form {
+    padding: 2rem;
+    border-radius: 0;
+  }
+
   .grid-container {
       padding: 3rem;
   }
