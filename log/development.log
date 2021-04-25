@@ -19552,3 +19552,593 @@ Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-24 23:55:17 
   
 ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
   
+Started GET "/organizations" for ::1 at 2021-04-24 23:56:31 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 1056)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 2824)
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 0.4ms | Allocations: 3781)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:56:31 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:56:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:56:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:56:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:56:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:56:33 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 2.1ms | Allocations: 815)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1127)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2893)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3420)
+
+
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:56:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:56:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:56:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:57:55 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 11.7ms | Allocations: 1455)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1778)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 1849)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2972)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+    <% if organization.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% organization.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <div class="button-gropu">
+    <%= f.submit, class: "button" %>
+    <%= link_to "Cancel", :back, class: "button" %>
+    </div>
+<% end %>
+
+):
+1:    <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+2:        <% if organization.errors.any? %>
+3:            <div id="error_explanation">
+4:                <h2>There were some errors:</h2>
+5:                <ul>
+6:                    <% organization.errors.full_messages.each do |message| %>
+7:                        <li><%= message %></li>
+8:                    <% end %>
+9:                </ul>
+10:            </div>
+11:        <% end %>
+12:        <%= f.label :name %>
+13:        <%= f.text_field :name %>
+14:        
+15:        <div class="button-gropu">
+16:        <%= f.submit, class: "button" %>
+17:        <%= link_to "Cancel", :back, class: "button" %>
+18:        </div>
+19:    <% end %>
+  
+app/views/organizations/_form.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/organizations/_form.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/organizations/_form.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/organizations/_form.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/organizations/_form.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/organizations/_form.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/organizations/new.html.erb:2
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:58:15 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 5.9ms | Allocations: 1457)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1775)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 1846)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms | Allocations: 2969)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+    <% if organization.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% organization.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <div class="button-gropu">
+    <%= f.submit, "Create" class: "button" %>
+    <%= link_to "Cancel", :back, class: "button" %>
+    </div>
+<% end %>
+
+):
+1:    <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+2:        <% if organization.errors.any? %>
+3:            <div id="error_explanation">
+4:                <h2>There were some errors:</h2>
+5:                <ul>
+6:                    <% organization.errors.full_messages.each do |message| %>
+7:                        <li><%= message %></li>
+8:                    <% end %>
+9:                </ul>
+10:            </div>
+11:        <% end %>
+12:        <%= f.label :name %>
+13:        <%= f.text_field :name %>
+14:        
+15:        <div class="button-gropu">
+16:        <%= f.submit, "Create" class: "button" %>
+17:        <%= link_to "Cancel", :back, class: "button" %>
+18:        </div>
+19:    <% end %>
+  
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting '.' or &. or :: or '['
+app/views/organizations/new.html.erb:2
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:58:25 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 1.1ms | Allocations: 1457)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1775)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1846)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2969)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+    <% if organization.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% organization.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <div class="button-group">
+    <%= f.submit, "Create", class: "button" %>
+    <%= link_to "Cancel", :back, class: "button" %>
+    </div>
+<% end %>
+
+):
+1:    <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+2:        <% if organization.errors.any? %>
+3:            <div id="error_explanation">
+4:                <h2>There were some errors:</h2>
+5:                <ul>
+6:                    <% organization.errors.full_messages.each do |message| %>
+7:                        <li><%= message %></li>
+8:                    <% end %>
+9:                </ul>
+10:            </div>
+11:        <% end %>
+12:        <%= f.label :name %>
+13:        <%= f.text_field :name %>
+14:        
+15:        <div class="button-group">
+16:        <%= f.submit, "Create", class: "button" %>
+17:        <%= link_to "Cancel", :back, class: "button" %>
+18:        </div>
+19:    <% end %>
+  
+app/views/organizations/_form.html.erb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/organizations/_form.html.erb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/organizations/new.html.erb:2
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:58:46 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 7.2ms | Allocations: 842)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1157)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3341)
+Completed 200 OK in 43ms (Views: 37.5ms | ActiveRecord: 0.0ms | Allocations: 4484)
+
+
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:58:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:58:46 -0400
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:58:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:58:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:58:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:58:55 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 2.8ms | Allocations: 1456)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1773)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1844)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2962)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+    <% if organization.errors.any? %>
+        <div id="error_explanation">
+            <h2>There were some errors:</h2>
+            <ul>
+                <% organization.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    
+    <div class="button-group">
+    <%= f.submit "Create" class: "button" %>
+    <%= link_to "Cancel", :back, class: "button" %>
+    </div>
+<% end %>
+
+):
+1:    <%= form_with model: organization, html: { class: "log-in-form" } do |f| %>
+2:        <% if organization.errors.any? %>
+3:            <div id="error_explanation">
+4:                <h2>There were some errors:</h2>
+5:                <ul>
+6:                    <% organization.errors.full_messages.each do |message| %>
+7:                        <li><%= message %></li>
+8:                    <% end %>
+9:                </ul>
+10:            </div>
+11:        <% end %>
+12:        <%= f.label :name %>
+13:        <%= f.text_field :name %>
+14:        
+15:        <div class="button-group">
+16:        <%= f.submit "Create" class: "button" %>
+17:        <%= link_to "Cancel", :back, class: "button" %>
+18:        </div>
+19:    <% end %>
+  
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting ')'
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting ')'
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting ')'
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting ')'
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting ')'
+app/views/organizations/_form.html.erb:16: syntax error, unexpected class, expecting ')'
+app/views/organizations/new.html.erb:2
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:59:02 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 3.1ms | Allocations: 722)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1037)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3221)
+Completed 200 OK in 48ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 4364)
+
+
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:59:14 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 4.0ms | Allocations: 721)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 3220)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 4363)
+
+
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:59:33 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 5.0ms | Allocations: 721)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1037)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 3221)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 4364)
+
+
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:34 -0400
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:34 -0400
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-24 23:59:38 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1056)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2825)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.4ms | Allocations: 3384)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:38 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:38 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/new" for ::1 at 2021-04-24 23:59:40 -0400
+Processing by OrganizationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/new.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 3.3ms | Allocations: 428)
+  Rendered organizations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 523)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2282)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 2681)
+
+
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-24 23:59:42 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 903)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2664)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 3094)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/9" for ::1 at 2021-04-24 23:59:43 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 9], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  Rendered organizations/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1469)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3235)
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 2.4ms | Allocations: 4306)
+
+
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:43 -0400
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/9/edit" for ::1 at 2021-04-24 23:59:45 -0400
+Processing by OrganizationsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/_form.html.erb (Duration: 1.5ms | Allocations: 460)
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 648)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2414)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 3486)
+
+
+Started GET "/organizations/9/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:46 -0400
+Started GET "/organizations/9/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/9/js/vendor/jquery.js"):
+  
+Started GET "/organizations/9/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/9/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/9/js/vendor/what-input.js"):
+  
+Started GET "/organizations/9/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/9/js/vendor/what-input.js"):
+  
+Started GET "/organizations/9/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/9/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/9" for ::1 at 2021-04-24 23:59:48 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:47:in `set_organization'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 9], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:6
+  Rendered organizations/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1135)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2895)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 1.3ms | Allocations: 3839)
+
+
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-24 23:59:48 -0400
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-24 23:59:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-24 23:59:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
