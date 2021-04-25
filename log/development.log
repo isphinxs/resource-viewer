@@ -22639,3 +22639,586 @@ Started GET "/users/js/vendor/jquery.js" for ::1 at 2021-04-25 09:15:58 -0400
   
 ActionController::RoutingError (No route matches [GET] "/users/js/vendor/jquery.js"):
   
+Started GET "/organizations" for ::1 at 2021-04-25 09:17:36 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1056)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3378)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 1.0ms | Allocations: 4335)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:17:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:17:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-25 09:17:38 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1277)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3600)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 1.2ms | Allocations: 4551)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:17:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:17:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/users/3" for ::1 at 2021-04-25 09:17:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1878)
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 3389)
+
+
+Started GET "/users/js/vendor/jquery.js" for ::1 at 2021-04-25 09:17:39 -0400
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:39 -0400
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-25 09:17:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-25 09:17:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-25 09:17:43 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 909)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3232)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 3663)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:17:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:17:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:17:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:17:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-25 09:18:52 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1064)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 3803)
+Completed 200 OK in 50ms (Views: 36.2ms | ActiveRecord: 0.6ms | Allocations: 4978)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:18:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:18:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:18:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:18:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:18:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-25 09:20:12 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1067)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3813)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 1.0ms | Allocations: 4991)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/" for ::1 at 2021-04-25 09:20:14 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1128)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2822)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 3726)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:14 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-25 09:20:16 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1236)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3559)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 1.2ms | Allocations: 4521)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:16 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-25 09:20:18 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (3.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 914)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3237)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 3.3ms | Allocations: 3668)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:18 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-25 09:20:19 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1273)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3595)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 0.7ms | Allocations: 4546)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:19 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/users/3" for ::1 at 2021-04-25 09:20:19 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 353)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3140)
+Completed 200 OK in 30ms (Views: 18.3ms | ActiveRecord: 1.0ms | Allocations: 6334)
+
+
+Started GET "/users/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:20 -0400
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/jquery.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-25 09:20:23 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1126)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3449)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 1.3ms | Allocations: 3880)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:23 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:23 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-25 09:20:25 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:3
+  Rendered organizations/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 914)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3236)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 3667)
+
+
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:25 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-25 09:20:49 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:4
+  Rendered organizations/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1069)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 3811)
+Completed 200 OK in 58ms (Views: 53.2ms | ActiveRecord: 1.5ms | Allocations: 4986)
+
+
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:20:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:20:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:20:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-25 09:21:15 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:3
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1273)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3596)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.7ms | Allocations: 4547)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:21:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:21:16 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:21:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:21:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:21:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-25 09:22:05 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:4
+  Rendered categories/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1282)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4024)
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 1.1ms | Allocations: 5199)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:22:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:22:05 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:22:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:22:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:22:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-25 09:23:50 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1236)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3558)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 4520)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:23:50 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:23:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:23:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:23:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-25 09:24:42 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:7
+  Rendered resources/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1247)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 3989)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 1.2ms | Allocations: 5175)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:24:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:24:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:24:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:24:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:24:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-25 09:25:17 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:8
+  Rendered resources/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1250)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 3992)
+Completed 200 OK in 42ms (Views: 31.6ms | ActiveRecord: 0.7ms | Allocations: 5178)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-25 09:25:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:25:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-25 09:25:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-25 09:25:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  

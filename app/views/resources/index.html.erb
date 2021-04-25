@@ -1,12 +1,13 @@
 <% if @organization %>
-    <h1>Resources for <%= @organization.name %></h1>
+    <h1 class="text-center">Funding Resources from <%= @organization.name %></h1>
 <% else %>
-    <h1>Resources</h1>
+    <h1 class="text-center">Funding Resources</h1>
 <% end %>
 <ul>
+<p>The following resources are available.</p>
 <% @resources.each do |resource| %>
     <li><%= link_to resource.name, resource_path(resource) %></li>
 <% end %>
 </ul>
 
-<%= link_to "Add New Resource", new_resource_path %>
+<%= link_to "Add New Resource", new_resource_path, class: "button" %>
