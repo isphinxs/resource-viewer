@@ -24,8 +24,8 @@
             <li><%= link_to "Resources", resources_path %></li>
             <li><%= link_to "Organizations", organizations_path %></li>
             <li><%= link_to "Categories", categories_path %></li>
-            <% if session[:user_id] %>
-              <li><%= button_to "Logout", logout_path %></li>
+            <% if current_user %>
+              <li><%= link_to "Account", user_path(current_user) %></li>
             <% end %>
           </ul>
         </div>

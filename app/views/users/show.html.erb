@@ -5,4 +5,7 @@
     <li>Email: <%= @user.email %></li>
 </ul>
 
-<%= link_to "Edit", edit_user_path(@user) %>
+<div class="button-group">
+    <%= link_to "Edit", edit_user_path(@user), class: "button" %>
+    <%= button_to "Logout", logout_path, class: "button" %>
+</div>
