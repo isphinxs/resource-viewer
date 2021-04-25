@@ -1,11 +1,13 @@
-<h1>Account</h1>
-<ul>
-    <li>First Name: <%= @user.first_name %></li>
-    <li>Last Name: <%= @user.last_name %></li>
-    <li>Email: <%= @user.email %></li>
-</ul>
+<div class="grid-container">
+    <h1 class="text-center">Account Details</h1>
+    <ul>
+        <li>First Name: <%= @user.first_name %></li>
+        <li>Last Name: <%= @user.last_name %></li>
+        <li>Email: <%= @user.email %></li>
+    </ul>
 
-<div class="button-group">
-    <%= link_to "Edit", edit_user_path(@user), class: "button" %>
-    <%= button_to "Logout", logout_path, class: "button" %>
+    <div class="button-group">
+        <%= link_to "Edit", edit_user_path(@user), class: "button" %>
+        <%= button_to "Logout", logout_path, class: "button" %>
+    </div>
 </div>
