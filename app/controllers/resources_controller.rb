@@ -13,11 +13,12 @@ class ResourcesController < ApplicationController
     end
 
     def show
-       set_resource 
+       set_resource
+    #    @average_rating = Rating.average_rating(@resource.id) 
+        average_rating
     end
-
+    
     def new
-        # byebug
         if nested_resource? && !Organization.exists?(params[:organization_id])
             redirect_to organizations_path, alert: "Organization not found."
         else
@@ -39,7 +40,7 @@ class ResourcesController < ApplicationController
             render :new
         end
     end
-
+    
     def edit
         set_resource
         # @category = self.categories.build
@@ -58,13 +59,21 @@ class ResourcesController < ApplicationController
             render :edit
         end
     end
-
+    
     def destroy
         set_resource.destroy
         redirect_to resources_path
     end
-
+    
     private
+    
+    def average_rating
+        @average_rating = Rating.average_rating(@resource.id).first.avg_rating 
+        # byebug
+        if @average_rating.nil?
+            @average_rating = "n/a"
+        end
+    end
     
     def nested_resource?
         params[:organization_id]

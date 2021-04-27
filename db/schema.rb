@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_25_192854) do
+ActiveRecord::Schema.define(version: 2021_04_27_003118) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2021_04_25_192854) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "resource_id", null: false
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["resource_id"], name: "index_ratings_on_resource_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "resource_categories", force: :cascade do |t|
@@ -56,6 +66,8 @@ ActiveRecord::Schema.define(version: 2021_04_25_192854) do
     t.string "provider"
   end
 
+  add_foreign_key "ratings", "resources"
+  add_foreign_key "ratings", "users"
   add_foreign_key "resource_categories", "categories"
   add_foreign_key "resource_categories", "resources"
   add_foreign_key "resources", "organizations"

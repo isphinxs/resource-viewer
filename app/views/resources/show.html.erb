@@ -10,6 +10,16 @@
     <% end %>
 </ul>
 
+<div>
+    <p>Average Rating: <%= @average_rating %></p>
+    <p>Leave a Rating:</p>
+    <%= form_with url: ratings_path do |f| %>
+        <%= f.hidden_field :resource_id, value: @resource.id %>
+        <%= f.number_field :rating, in: 1...6, step: 1 %>
+        <%= f.submit %>
+    <% end %>
+</div>
+
 <div class="button-group">
 <%= link_to "New", new_resource_path, class: "button" %>
 <%= link_to "Edit", edit_resource_path(@resource), class: "button" %>

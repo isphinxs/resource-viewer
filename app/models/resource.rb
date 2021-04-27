@@ -1,5 +1,6 @@
 class Resource < ApplicationRecord
   belongs_to :organization
+  has_many :ratings
   has_many :resource_categories, dependent: :destroy
   has_many :categories, through: :resource_categories
   accepts_nested_attributes_for :categories, reject_if: proc { |attributes| attributes["name"].blank? }
@@ -9,7 +10,7 @@ class Resource < ApplicationRecord
   validates :name, uniqueness: true, on: :create
 
   scope :alphabetical, -> { order("name") }
-  
+
   def categories_attributes=(categories_attributes)
     categories_attributes.values.each do |category_attribute|
       if !category_attribute[:name].blank?
