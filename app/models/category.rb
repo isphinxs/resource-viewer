@@ -5,4 +5,8 @@ class Category < ApplicationRecord
     validates :name, presence: :true, uniqueness: true
 
     scope :alphabetical, -> { order("name") }
+
+    before_save do
+        self.name = name.downcase
+    end
 end
