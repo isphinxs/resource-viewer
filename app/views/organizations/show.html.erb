@@ -7,9 +7,11 @@
         <% @organization.resources.order(name: :asc).each do |resource| %>
             <li><%= link_to resource.name, resource_path(resource) %></li>
         <% end %>
+        <br>
         <li>Total Funding Available: <%= number_to_currency(@total_amount, unit: "$", precision: 0) %></li>
+        <br>
     <% end %>
-    <li><i class="fas fa-paperclip"></i> <%= link_to "Add a New Resource", new_organization_resource_path(@organization) %></li>
+    <li><i class="fas fa-paperclip"></i> <%= link_to "Add a New Resource for #{@organization.name}", new_organization_resource_path(@organization) %></li>
 </ul>
 
 <div class="button-group">
