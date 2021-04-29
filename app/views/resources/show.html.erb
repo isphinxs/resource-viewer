@@ -15,7 +15,7 @@
     <p>Leave a Rating:</p>
     <%= form_with url: ratings_path do |f| %>
         <%= f.hidden_field :resource_id, value: @resource.id %>
-        <%= f.number_field :rating, in: 1...6, step: 1 %>
+        <%= f.select :rating, 1...6 %>
         <%= f.submit %>
     <% end %>
 </div>
