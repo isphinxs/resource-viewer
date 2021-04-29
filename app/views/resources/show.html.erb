@@ -3,22 +3,24 @@
 <p>Link: <%= link_to @resource.link, @resource.link %></p>
 <p>Organization: <%= link_to @resource.organization_name, organization_path(@resource.organization) %></p>
 <p>Description: <%= @resource.description %></p>
-<p>Categories:</p>
-<ul>
+<p>Categories:
     <% @resource.categories.each do |category| %>
-        <li><%= link_to category.name, category_path(category) %></li>
+        <%= link_to category.name, category_path(category) %>
     <% end %>
-</ul>
+</p>
 
-<div>
-    <p>Average Rating: <%= @average_rating %></p>
-    <p>Leave a Rating:</p>
-    <%= form_with url: ratings_path do |f| %>
-        <%= f.hidden_field :resource_id, value: @resource.id %>
-        <%= f.select :rating, 1...6 %>
-        <%= f.submit %>
-    <% end %>
-</div>
+<p>Average Rating: <%= @average_rating %></p>
+
+<%= form_with url: ratings_path do |f| %>
+    <%= f.hidden_field :resource_id, value: @resource.id %>
+    <%= f.label "Leave a Rating" %>
+    <div class="input-group rating"> 
+        <%= f.select :rating, 1...6, class: "input-group-field" %>
+        <div class="input-group-button">
+            <%= f.submit "Rate", class: "hollow button" %>
+        </div>
+    </div>
+<% end %>
 
 <div class="button-group">
 <%= link_to "New", new_resource_path, class: "button" %>
