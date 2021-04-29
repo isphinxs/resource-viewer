@@ -36057,3 +36057,941 @@ Started GET "/categories/js/vendor/foundation.min.js" for ::1 at 2021-04-28 22:5
   
 ActionController::RoutingError (No route matches [GET] "/categories/js/vendor/foundation.min.js"):
   
+Started GET "/resources" for ::1 at 2021-04-28 22:59:37 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:11
+  Rendered resources/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1000)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3322)
+Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 0.8ms | Allocations: 3763)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-28 22:59:37 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-28 22:59:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-28 22:59:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-28 22:59:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-28 22:59:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/" for ::1 at 2021-04-28 22:59:40 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1138)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2833)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 3741)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-28 22:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-28 22:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-28 22:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-28 22:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-29 18:45:44 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:4
+  Rendered organizations/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 3836)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 363.8ms | Allocations: 26445)
+Completed 200 OK in 412ms (Views: 366.1ms | ActiveRecord: 7.9ms | Allocations: 31581)
+
+
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 18:45:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:45 -0400
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 18:45:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 18:45:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-29 18:45:46 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:4
+  Rendered categories/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3667)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 6124)
+Completed 200 OK in 35ms (Views: 25.0ms | ActiveRecord: 3.7ms | Allocations: 8816)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 18:45:46 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 18:45:46 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-29 18:45:49 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:11
+  Rendered resources/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 5762)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 8085)
+Completed 200 OK in 44ms (Views: 27.3ms | ActiveRecord: 2.8ms | Allocations: 11839)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 18:45:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 18:45:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources/10" for ::1 at 2021-04-29 18:45:53 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 10) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:24:in `organization_name'
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 10]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 508.6ms | Allocations: 234791)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 515.0ms | Allocations: 237111)
+Completed 200 OK in 543ms (Views: 513.4ms | ActiveRecord: 4.8ms | Allocations: 243862)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 18:45:54 -0400
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 18:45:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:45:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-29 18:48:48 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:11
+  Rendered resources/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1002)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 3318)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 1.4ms | Allocations: 3767)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 18:48:48 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 18:48:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:48:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/resources/7" for ::1 at 2021-04-29 18:48:59 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mResource Load (2.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (1.4ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 7) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:24:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 7]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 53.4ms | Allocations: 3865)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 6178)
+Completed 200 OK in 73ms (Views: 61.3ms | ActiveRecord: 4.2ms | Allocations: 7863)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 18:48:59 -0400
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:48:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 18:48:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 18:49:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:49:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-29 18:49:02 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:11
+  Rendered resources/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 994)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3308)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 3748)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 18:49:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 18:49:02 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:49:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 18:49:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/users/3" for ::1 at 2021-04-29 19:02:28 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 59.6ms | Allocations: 11637)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 11785)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 3.2ms | Allocations: 25146)
+
+
+  
+ActionView::Template::Error (undefined method `resource' for #<Rating:0x00007ffc528fdc38>
+Did you mean?  resources
+               resources=):
+     8:     <h3>Your Ratings</h3>
+     9:     <ul>
+    10:     <% @user.ratings.each do |rating| %>
+    11:         <li><%= rating.resource.name %> - <%= rating.rating %></li>
+    12:     <% end %>
+    13:     </ul>
+    14: 
+  
+app/views/users/show.html.erb:11
+app/views/users/show.html.erb:10
+Started GET "/users/3" for ::1 at 2021-04-29 19:02:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 128.5ms | Allocations: 8824)
+  Rendered layout layouts/application.html.erb (Duration: 191.7ms | Allocations: 14137)
+Completed 200 OK in 206ms (Views: 195.0ms | ActiveRecord: 1.7ms | Allocations: 16569)
+
+
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-29 19:03:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:03:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+Started GET "/users/js/vendor/jquery.js" for ::1 at 2021-04-29 19:03:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/jquery.js"):
+  
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-29 19:03:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:03:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "ratings" ON "resources"."rating_id" = "ratings"."id" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ? ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "ratings" ON "resources"."rating_id" = "ratings"."id" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" INNER JOIN "ratings" ON "resources"."rating_id" = "ratings"."id" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY "resources"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRating Load (1.6ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."resource_id" = ? /* loading for inspect */ LIMIT ?[0m  [["resource_id", 1], ["LIMIT", 11]]
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/resources" for ::1 at 2021-04-29 19:11:04 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:11
+  Rendered resources/index.html.erb within layouts/application (Duration: 42.9ms | Allocations: 6416)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 125.2ms | Allocations: 21630)
+Completed 200 OK in 184ms (Views: 132.2ms | ActiveRecord: 3.4ms | Allocations: 29441)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:04 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:04 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources/2" for ::1 at 2021-04-29 19:11:05 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 2) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:25:in `organization_name'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 2]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 312.0ms | Allocations: 241888)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 320.2ms | Allocations: 244333)
+Completed 200 OK in 353ms (Views: 318.5ms | ActiveRecord: 5.8ms | Allocations: 250763)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/categories" for ::1 at 2021-04-29 19:11:09 -0400
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name[0m
+  ↳ app/views/categories/index.html.erb:4
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3116)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5441)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 1.0ms | Allocations: 6461)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:09 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations" for ::1 at 2021-04-29 19:11:11 -0400
+Processing by OrganizationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/index.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" ORDER BY name[0m
+  ↳ app/views/organizations/index.html.erb:4
+  Rendered organizations/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1105)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3428)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 4433)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/2" for ::1 at 2021-04-29 19:11:12 -0400
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:48:in `set_organization'
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT organizations.id, sum(resources.amount) as total_amount FROM "organizations" INNER JOIN "resources" ON "resources"."organization_id" = "organizations"."id" GROUP BY "organizations"."id"[0m
+  ↳ app/controllers/organizations_controller.rb:57:in `detect'
+  Rendering layout layouts/application.html.erb
+  Rendering organizations/show.html.erb within layouts/application
+  [1m[36mResource Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "resources" WHERE "resources"."organization_id" = ? LIMIT ?[0m  [["organization_id", 2], ["LIMIT", 1]]
+  ↳ app/views/organizations/show.html.erb:4
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."organization_id" = ? ORDER BY "resources"."name" ASC[0m  [["organization_id", 2]]
+  ↳ app/views/organizations/show.html.erb:7
+  Rendered organizations/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2603)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 4924)
+Completed 200 OK in 40ms (Views: 20.9ms | ActiveRecord: 2.3ms | Allocations: 7920)
+
+
+Started GET "/organizations/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/jquery.js"):
+  
+Started GET "/organizations/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/foundation.min.js"):
+  
+Started GET "/organizations/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/organizations/js/vendor/what-input.js"):
+  
+Started GET "/resources" for ::1 at 2021-04-29 19:11:15 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/views/resources/index.html.erb:11
+  Rendered resources/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1000)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3322)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 3763)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/jquery.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:16 -0400
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/what-input.js"):
+  
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/js/vendor/foundation.min.js"):
+  
+Started GET "/resources/10" for ::1 at 2021-04-29 19:11:17 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 10) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:25:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 10]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3845)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6158)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 1.1ms | Allocations: 7842)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 19:11:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:11:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/users/3" for ::1 at 2021-04-29 19:11:19 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4474)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4544)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms | Allocations: 6619)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     8:     <h3>Your Ratings</h3>
+     9:     <ul>
+    10:     <% @user.ratings.each do |rating| %>
+    11:         <li><%= rating.resources.name %> - <%= rating.rating %></li>
+    12:     <% end %>
+    13:     </ul>
+    14: 
+  
+app/views/users/show.html.erb:11
+app/views/users/show.html.erb:10
+Started GET "/resources/10" for ::1 at 2021-04-29 19:11:41 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (3.6ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 10) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (13.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:25:in `organization_name'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 10]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 39.3ms | Allocations: 3853)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 82.4ms | Allocations: 6173)
+Completed 200 OK in 109ms (Views: 71.8ms | ActiveRecord: 20.4ms | Allocations: 7859)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 19:11:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+Started POST "/ratings" for ::1 at 2021-04-29 19:11:45 -0400
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "resource_id"=>"10", "rating"=>"1", "commit"=>"Rate"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 3135)
+
+
+  
+ActionView::MissingTemplate (Missing template resources/10 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/samo/Development/code/phase-3/rails-project/resource-viewer/app/views"
+  * "/Users/samo/.rvm/gems/ruby-2.6.1/gems/actiontext-6.1.3.1/app/views"
+  * "/Users/samo/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.1.3.1/app/views"
+):
+  
+app/controllers/ratings_controller.rb:9:in `create'
+Started GET "/resources/10" for ::1 at 2021-04-29 19:12:01 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 10) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:25:in `organization_name'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 10]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3839)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 6152)
+Completed 200 OK in 29ms (Views: 19.9ms | ActiveRecord: 1.4ms | Allocations: 7837)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/resources/10" for ::1 at 2021-04-29 19:14:42 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (0.4ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 10) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:25:in `organization_name'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 10]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 266.0ms | Allocations: 241942)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 299.2ms | Allocations: 255237)
+Completed 200 OK in 430ms (Views: 303.5ms | ActiveRecord: 6.7ms | Allocations: 274594)
+
+
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:14:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 19:14:43 -0400
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 19:14:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:14:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started POST "/ratings" for ::1 at 2021-04-29 19:14:47 -0400
+Processing by RatingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "resource_id"=>"10", "rating"=>"1", "commit"=>"Rate"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ratings_controller.rb:5:in `create'
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ratings_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ratings_controller.rb:6:in `create'
+  [1m[36mRating Create (9.0ms)[0m  [1m[32mINSERT INTO "ratings" ("user_id", "resource_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["resource_id", 10], ["rating", 1], ["created_at", "2021-04-29 23:14:47.275958"], ["updated_at", "2021-04-29 23:14:47.275958"]]
+  ↳ app/controllers/ratings_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ratings_controller.rb:6:in `create'
+Redirected to http://localhost:3000/resources/10
+Completed 302 Found in 55ms (ActiveRecord: 13.5ms | Allocations: 6261)
+
+
+Started GET "/resources/10" for ::1 at 2021-04-29 19:14:47 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:83:in `set_resource'
+  [1m[36mRating Load (0.6ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 10) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `average_rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:25:in `organization_name'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 10]]
+  ↳ app/views/resources/show.html.erb:7
+  Rendered resources/show.html.erb within layouts/application (Duration: 23.3ms | Allocations: 3949)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 6377)
+Completed 200 OK in 61ms (Views: 38.0ms | ActiveRecord: 2.2ms | Allocations: 11154)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-04-29 19:14:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/jquery.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:14:47 -0400
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-04-29 19:14:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/what-input.js"):
+  
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:14:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/resources/js/vendor/foundation.min.js"):
+  
+Started GET "/users/3" for ::1 at 2021-04-29 19:14:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (1.6ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 20.2ms | Allocations: 4725)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4795)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.9ms | Allocations: 6888)
+
+
+  
+ActionView::Template::Error (undefined method `resources' for #<Rating:0x00007f8643777970>
+Did you mean?  resource
+               resource=
+               resource_id):
+     8:     <h3>Your Ratings</h3>
+     9:     <ul>
+    10:     <% @user.ratings.each do |rating| %>
+    11:         <li><%= rating.resources.name %> - <%= rating.rating %></li>
+    12:     <% end %>
+    13:     </ul>
+    14: 
+  
+app/views/users/show.html.erb:11
+app/views/users/show.html.erb:10
+Started GET "/users/3" for ::1 at 2021-04-29 19:15:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (0.5ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  [1m[36mCACHE Resource Load (0.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  [1m[36mCACHE Resource Load (0.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  [1m[36mCACHE Resource Load (0.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 79.7ms | Allocations: 6577)
+  Rendered layout layouts/application.html.erb (Duration: 109.6ms | Allocations: 8699)
+Completed 200 OK in 138ms (Views: 124.1ms | ActiveRecord: 2.3ms | Allocations: 10954)
+
+
+Started GET "/users/js/vendor/jquery.js" for ::1 at 2021-04-29 19:15:21 -0400
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-29 19:15:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/jquery.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:15:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-29 19:15:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:15:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+Started GET "/users/3" for ::1 at 2021-04-29 19:16:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  Rendered users/show.html.erb within layouts/application (Duration: 31.8ms | Allocations: 8978)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 9048)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 3.7ms | Allocations: 19513)
+
+
+  
+ActionView::Template::Error (undefined method `resource_name' for #<Rating:0x00007f863ee3ca08>
+Did you mean?  resource_id
+               resource_id=
+               resource_id?):
+     8:     <h3>Your Ratings</h3>
+     9:     <ul>
+    10:     <% @user.ratings.each do |rating| %>
+    11:         <li><%= rating.resource_name %> - <%= rating.rating %></li>
+    12:     <% end %>
+    13:     </ul>
+    14: 
+  
+app/views/users/show.html.erb:11
+app/views/users/show.html.erb:10
+Started GET "/users/3" for ::1 at 2021-04-29 19:17:26 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:51:in `require_authorization'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  [1m[36mCACHE Resource Load (0.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  [1m[36mCACHE Resource Load (0.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  [1m[36mResource Load (0.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  [1m[36mCACHE Resource Load (0.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/models/rating.rb:8:in `resource_name'
+  Rendered users/show.html.erb within layouts/application (Duration: 60.6ms | Allocations: 19469)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 21592)
+Completed 200 OK in 98ms (Views: 66.8ms | ActiveRecord: 5.2ms | Allocations: 31321)
+
+
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:17:27 -0400
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-29 19:17:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/jquery.js" for ::1 at 2021-04-29 19:17:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/jquery.js"):
+  
+Started GET "/users/js/vendor/what-input.js" for ::1 at 2021-04-29 19:17:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/what-input.js"):
+  
+Started GET "/users/js/vendor/foundation.min.js" for ::1 at 2021-04-29 19:17:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/vendor/foundation.min.js"):
+  

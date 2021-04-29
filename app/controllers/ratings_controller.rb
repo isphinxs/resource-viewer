@@ -15,4 +15,5 @@ class RatingsController < ApplicationController
     def ratings_params
         params.permit(:resource_id, :rating)
     end
+
 end
