@@ -4,6 +4,9 @@ class UsersController < ApplicationController
 
     def show
         @user = current_user
+        @ratings = @user.ratings.alphabetical_by_resource
+        byebug
+        # @ratings = @user.ratings
     end
 
     def new

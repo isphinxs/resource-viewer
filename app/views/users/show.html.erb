@@ -7,7 +7,7 @@
     </ul>
     <h3>Your Ratings</h3>
     <ul>
-    <% @user.ratings.each do |rating| %>
+    <% @ratings.each do |rating| %>
         <li><%= rating.resource_name %> - <%= rating.rating %></li>
     <% end %>
     </ul>
