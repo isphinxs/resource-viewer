@@ -60,6 +60,14 @@ ul {
     background-color: #F8FBEF;
 }
 
+.field_with_errors label::after {
+    content: " *";
+}
+
+.field_with_errors input {
+    border-color: #E63462;
+}
+
 .form {
     padding: 2rem;
     border-radius: 0;
