@@ -1,5 +1,5 @@
 class Organization < ApplicationRecord
-    has_many :resources
+    has_many :resources, dependent: :destroy
     validates :name, presence: true, uniqueness: true
 
     scope :alphabetical, -> { order("name") }

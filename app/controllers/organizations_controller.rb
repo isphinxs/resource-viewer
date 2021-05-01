@@ -1,12 +1,12 @@
 class OrganizationsController < ApplicationController
     before_action :require_login
+    before_action :set_organization, only: [:show, :edit, :update, :destroy]
 
     def index
         @organizations = Organization.alphabetical
     end
 
     def show
-        set_organization
         @total_amount = find_total_amount(@organization.id)
     end
 
@@ -25,11 +25,9 @@ class OrganizationsController < ApplicationController
     end
 
     def edit
-        set_organization
     end
 
     def update
-        set_organization
         if @organization.update(organization_params)
             redirect_to organization_path(@organization)
         else
@@ -38,7 +36,7 @@ class OrganizationsController < ApplicationController
     end
     
     def destroy
-        set_organization.destroy
+        @organization.destroy
         redirect_to organizations_path
     end
 
