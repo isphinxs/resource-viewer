@@ -11,9 +11,10 @@
 </ul>
 
 <div class="button-group">
-    <%= link_to "New", new_category_path, class: "button" %>
     <%= link_to "Edit", edit_category_path(@category), class: "button" %>
     <%= form_with model: @category, method: "delete" do |f| %>
         <%= f.submit "Delete", class: "button" %>
     <% end %>
 </div>
+
+<%= link_to "Add New Category", new_category_path, class: "button" %>
