@@ -4,9 +4,9 @@ class ResourcesController < ApplicationController
 
     def index
         if nested_resource?
-            # byebug
             @organization = Organization.find_by(id: params[:organization_id])
             @resources = @organization.resources.alphabetical
+            # byebug
         else
             @resources = Resource.alphabetical
         end
