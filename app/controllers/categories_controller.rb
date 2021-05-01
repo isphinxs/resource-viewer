@@ -1,12 +1,12 @@
 class CategoriesController < ApplicationController
     before_action :require_login
+    before_action :set_category, only: [:show, :edit, :update, :destroy]
 
     def index
         @categories = Category.alphabetical
     end
 
     def show
-        set_category
     end
 
     def new
@@ -24,11 +24,9 @@ class CategoriesController < ApplicationController
     end
 
     def edit
-        set_category
     end
 
     def update
-        set_category
         if @category.update(category_params)
             redirect_to category_path(@category)
         else
@@ -37,7 +35,7 @@ class CategoriesController < ApplicationController
     end
 
     def destroy
-        set_category.destroy
+        @category.destroy
         redirect_to categories_path
     end
 
