@@ -7,7 +7,7 @@ class OrganizationsController < ApplicationController
     end
 
     def show
-        @total_amount = find_total_amount(@organization.id)
+        @total_funding = @organization.find_total_funding
     end
 
     def new
@@ -50,9 +50,4 @@ class OrganizationsController < ApplicationController
         params.require(:organization).permit(:name)
     end
 
-    def find_total_amount(id)
-        total_amounts = Organization.totals_by_organization
-        total = total_amounts.detect { |organization| organization.id == id}
-        total.nil? ? 0 : total.total_amount
-    end
 end
