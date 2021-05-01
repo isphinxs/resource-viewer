@@ -1,20 +1,18 @@
 class ResourcesController < ApplicationController
     before_action :require_login
+    before_action :set_resource, only: [:show, :edit, :update, :destroy]
     helper_method :nested_resource?
 
     def index
         if nested_resource?
             @organization = Organization.find_by(id: params[:organization_id])
             @resources = @organization.resources.alphabetical
-            # byebug
         else
             @resources = Resource.alphabetical
         end
     end
 
     def show
-       set_resource
-    #    @average_rating = Rating.average_rating(@resource.id) 
         average_rating
     end
     
@@ -29,7 +27,6 @@ class ResourcesController < ApplicationController
     end
     
     def create
-        # byebug
         @resource = Resource.new(resource_params)
         if @resource.valid?
             @resource.save
@@ -42,15 +39,11 @@ class ResourcesController < ApplicationController
     end
     
     def edit
-        set_resource
-        # @category = self.categories.build
         @categories = Category.alphabetical
         @organizations = Organization.alphabetical
     end
     
     def update
-        # byebug
-        set_resource
         if @resource.update(resource_params)
             redirect_to resource_path(@resource)
         else
@@ -61,7 +54,7 @@ class ResourcesController < ApplicationController
     end
     
     def destroy
-        set_resource.destroy
+        @resource.destroy
         redirect_to resources_path
     end
     
@@ -69,7 +62,6 @@ class ResourcesController < ApplicationController
     
     def average_rating
         @average_rating = Rating.average_rating(@resource.id).first.avg_rating 
-        # byebug
         if @average_rating.nil?
             @average_rating = "n/a"
         end
