@@ -22,10 +22,9 @@
     <%= f.label :email %>
     <%= f.text_field :email %>
     <br>
-    <div class="button-group">
-        <%= f.submit "Update Account", class: "button" %>
-        <%= form_with model: @user, method: "delete" do |f| %>
-            <%= f.submit "Delete Account", class: "button" %>
-        <% end %>
-    </div>
+    <%= f.submit "Update Account", class: "button" %>
+<% end %>
+
+<%= form_with model: @user, method: "delete" do |f| %>
+    <%= f.submit "Delete Account", class: "button" %>
 <% end %>
