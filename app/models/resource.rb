@@ -12,6 +12,14 @@ class Resource < ApplicationRecord
 
   scope :alphabetical, -> { order("name") }
 
+  def rating
+    rating = Rating.average_rating(self.id).first.avg_rating 
+    if rating.nil?
+        rating = "n/a"
+    end
+    rating
+  end
+
   def categories_attributes=(categories_attributes)
     categories_attributes.values.each do |category_attribute|
       if !category_attribute[:name].blank?

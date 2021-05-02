@@ -8,8 +8,7 @@
         <%= link_to category.name, category_path(category) %>
     <% end %>
 </p>
-
-<p>Average Rating: <%= @average_rating %></p>
+<p>Average Rating: <%= @rating %></p>
 
 <%= form_with url: ratings_path do |f| %>
     <%= f.hidden_field :resource_id, value: @resource.id %>

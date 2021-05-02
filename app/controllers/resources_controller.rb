@@ -13,7 +13,7 @@ class ResourcesController < ApplicationController
     end
 
     def show
-        average_rating
+        @rating = @resource.rating
     end
     
     def new
@@ -60,13 +60,6 @@ class ResourcesController < ApplicationController
     
     private
     
-    def average_rating
-        @average_rating = Rating.average_rating(@resource.id).first.avg_rating 
-        if @average_rating.nil?
-            @average_rating = "n/a"
-        end
-    end
-    
     def nested_resource?
         params[:organization_id]
     end
@@ -77,9 +70,5 @@ class ResourcesController < ApplicationController
 
     def resource_params
         params.require(:resource).permit(:name, :amount, :link, :description, :organization_id, organization_attributes: :name, category_ids: [], categories_attributes: [:name])
-    end
-
-    def organization_name
-        self.organization ? self.organization.name : nil
     end
 end
