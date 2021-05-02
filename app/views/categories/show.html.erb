@@ -1,13 +1,7 @@
 <h1 class="text-center">Category: <%= @category.name %></h1>
 <h3>Available Resources</h3>
 <ul>
-<% if @category.resources.empty? %>
-    <li>No Resources Available</li>
-<% else %>
-    <% @category.resources.each do |resource| %>
-        <li><%= link_to resource.name, resource_path(resource) %></li>
-    <% end %>
-<% end %>
+    <%= resource_list_index @category %>
 </ul>
 
 <div class="button-group">
