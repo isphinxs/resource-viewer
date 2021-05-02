@@ -1,13 +1,5 @@
 <%= resource_title %>
 <ul>
-<% if @resources.blank? %>
-    <p>No resources are available.</p>
-<% else %>
-    <p>The following resources are available.</p>
-    <% @resources.each do |resource| %>
-        <li><i class="fas fa-paperclip"></i> <%= link_to resource.name, resource_path(resource) %></li>
-    <% end %>
-    </ul>
-<% end %>
-
+    <%= list_index %>
+</ul>
 <%= new_resource_link %>

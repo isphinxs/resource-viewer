@@ -7,6 +7,17 @@ module ResourcesHelper
         end
     end
 
+    def list_index
+        if @resources.blank?
+            content_tag(:li, "No Resources Available.")
+        else
+            @resources.collect do |resource|
+                text = content_tag(:i, "", class: ["fas fa-paperclip"]) + " " + link_to(resource.name, resource_path(resource))
+                content_tag(:li, text)
+            end.join.html_safe
+        end
+    end
+
     def resource_list_index(object)
         if object.resources.empty?
             content_tag(:li, "No Resources Available")
