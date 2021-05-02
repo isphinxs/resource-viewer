@@ -5,8 +5,12 @@ class ResourcesController < ApplicationController
 
     def index
         if nested_resource?
-            @organization = Organization.find_by(id: params[:organization_id])
-            @resources = @organization.resources.alphabetical
+            if !Organization.exists?(params[:organization_id])
+                redirect_to organizations_path, alert: "Organization not found."
+            else
+                @organization = Organization.find_by(id: params[:organization_id])
+                @resources = @organization.resources.alphabetical
+            end
         else
             @resources = Resource.alphabetical
         end
@@ -62,6 +66,13 @@ class ResourcesController < ApplicationController
     
     def nested_resource?
         params[:organization_id]
+    end
+
+    def redirect_if_organization_invalid
+        if nested_resource? && !Organization.exists?(params[:organization_id])
+            byebug
+            redirect_to organizations_path, alert: "Organization not found."
+        end
     end
 
     def set_resource
