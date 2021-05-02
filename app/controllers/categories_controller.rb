@@ -43,6 +43,9 @@ class CategoriesController < ApplicationController
 
     def set_category
         @category = Category.find_by(id: params[:id])
+        if @category.nil?
+            redirect_to categories_path, alert: "Category not found."
+        end
     end
 
     def category_params
