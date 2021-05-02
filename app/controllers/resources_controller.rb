@@ -77,6 +77,9 @@ class ResourcesController < ApplicationController
 
     def set_resource
         @resource = Resource.find_by(id: params[:id])
+        if @resource.nil?
+            redirect_to resources_path, alert: "Resource not found."
+        end
     end
 
     def resource_params
