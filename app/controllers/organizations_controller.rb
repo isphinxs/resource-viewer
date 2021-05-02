@@ -44,6 +44,9 @@ class OrganizationsController < ApplicationController
 
     def set_organization
         @organization = Organization.find_by(id: params[:id])
+        if @organization.nil?
+            redirect_to organizations_path, alert: "Organization not found."
+        end
     end
 
     def organization_params
