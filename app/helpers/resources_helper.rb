@@ -32,7 +32,7 @@ module ResourcesHelper
     def resource_title
         text = "Funding Resources"
         if @organization
-            text << "for #{@organization.name}"
+            text << " for #{@organization.name}"
         end
         content_tag(:h1, text, class: ["text-center"])
     end
