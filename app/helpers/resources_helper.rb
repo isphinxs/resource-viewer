@@ -1,4 +1,12 @@
 module ResourcesHelper
+    def new_resource_link
+        if @organization
+            link_to("Add New Resource for #{@organization.name}", new_organization_resource_path(@organization), class: ["button"])
+        else
+            link_to("Add New Resource", new_resource_path, class: ["button"])
+        end
+    end
+
     def resource_list_index(object)
         if object.resources.empty?
             content_tag(:li, "No Resources Available")

@@ -10,8 +10,4 @@
     </ul>
 <% end %>
 
-<% if @organization %>
-    <%= link_to "Add New Resource for #{@organization.name}", new_organization_resource_path(@organization), class: "button" %>
-<% else %>
-    <%= link_to "Add New Resource", new_resource_path, class: "button" %>
-<% end %>
+<%= new_resource_link %>
