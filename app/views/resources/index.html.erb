@@ -1,8 +1,4 @@
-<% if @organization %>
-    <h1 class="text-center">Funding Resources from <%= @organization.name %></h1>
-<% else %>
-    <h1 class="text-center">Funding Resources</h1>
-<% end %>
+<%= resource_title %>
 <ul>
 <% if @resources.blank? %>
     <p>No resources are available.</p>
