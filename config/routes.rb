@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :ratings, only: [:create]
   resources :users, only: [:show, :edit, :update, :destroy]
+
+  match "*unmatched", to: "pages#route_not_found", via: :all
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
