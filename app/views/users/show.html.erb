@@ -5,15 +5,19 @@
         <li>Last Name: <%= @user.last_name %></li>
         <li>Email: <%= @user.email %></li>
     </ul>
-    <h3>Your Ratings</h3>
-    <ul>
-    <% @ratings.each do |rating| %>
-        <li><%= rating.resource_name %> - <%= rating.rating %></li>
-    <% end %>
-    </ul>
-
+   
     <div class="button-group">
         <%= link_to "Edit", edit_user_path(@user), class: "button" %>
         <%= render partial: "pages/logout_button" %>
     </div>
+
+    <div class="card">
+        <h3>Your Resource Ratings</h3>
+        <% @ratings.each do |rating| %>
+            <div class="cell">
+                <%= link_to rating.resource_name, resource_path(rating.resource) %> - <%= rating.rating %>
+            </div>
+        <% end %>
+    </div>
+
 </div>

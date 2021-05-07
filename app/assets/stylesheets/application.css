@@ -79,6 +79,11 @@ ul {
     background-color: #EEF5DB;
 }
 
+.card {
+    padding: 3rem;
+    background-color: #F8FBEF;
+}
+
 .hero-section {
     text-align: center;
 }
