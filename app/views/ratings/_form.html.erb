@@ -1,0 +1,10 @@
+<%= form_with url: ratings_path do |f| %>
+    <%= f.hidden_field :resource_id, value: resource.id %>
+    <%= f.label "Leave a Rating" %>
+    <div class="input-group rating"> 
+        <%= f.select :rating, 1...6, class: "input-group-field" %>
+        <div class="input-group-button">
+            <%= f.submit "Rate", class: "hollow button" %>
+        </div>
+    </div>
+<% end %>

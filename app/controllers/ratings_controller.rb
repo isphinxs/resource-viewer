@@ -1,6 +1,5 @@
 class RatingsController < ApplicationController
     def create
-        # byebug
         rating = Rating.new(user_id: current_user.id, resource_id: params[:resource_id], rating: params[:rating])
         if rating.valid?
             rating.save
