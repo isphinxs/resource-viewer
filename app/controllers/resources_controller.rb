@@ -1,16 +1,13 @@
 class ResourcesController < ApplicationController
     before_action :require_login
     before_action :set_resource, only: [:show, :edit, :update, :destroy]
+    before_action :redirect_if_organization_invalid, only: [:index, :new]
     helper_method :nested_resource?
 
     def index
         if nested_resource?
-            if !Organization.exists?(params[:organization_id])
-                redirect_to organizations_path, alert: "Organization not found."
-            else
-                @organization = Organization.find_by(id: params[:organization_id])
-                @resources = @organization.resources.alphabetical
-            end
+            @organization = Organization.find_by(id: params[:organization_id])
+            @resources = @organization.resources.alphabetical
         else
             @resources = Resource.alphabetical
         end
@@ -21,13 +18,9 @@ class ResourcesController < ApplicationController
     end
     
     def new
-        if nested_resource? && !Organization.exists?(params[:organization_id])
-            redirect_to organizations_path, alert: "Organization not found."
-        else
-            @resource = Resource.new(organization_id: params[:organization_id])
-            @categories = Category.alphabetical
-            @organizations = Organization.alphabetical
-        end
+        @resource = Resource.new(organization_id: params[:organization_id])
+        @categories = Category.alphabetical
+        @organizations = Organization.alphabetical
     end
     
     def create
@@ -70,7 +63,6 @@ class ResourcesController < ApplicationController
 
     def redirect_if_organization_invalid
         if nested_resource? && !Organization.exists?(params[:organization_id])
-            byebug
             redirect_to organizations_path, alert: "Organization not found."
         end
     end
