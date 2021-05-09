@@ -6,6 +6,8 @@ A Rails content management system for financial resources for writers.
 
 Clone this repository, run `bundle install`, `rails db:migrate`, and `rails db:seed`. To start the server, run `rails s` and navigate to http://localhost:3000/organizations.
 
+For Google authentication to work, you will need to obtain a Google client ID and secret, and add them to the .env file as `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT-SECRET`.
+
 # Usage
 
 Users can create Resources and associate them with Organizations and Categories.  Users can also rate a Resource (on a scale of 1-5) and see the average rating for each Resource.
