@@ -1,23 +1,25 @@
-<div class="grid-container">
     <h1 class="text-center">Account Details</h1>
-    <ul>
-        <li>First Name: <%= @user.first_name %></li>
-        <li>Last Name: <%= @user.last_name %></li>
-        <li>Email: <%= @user.email %></li>
-    </ul>
-   
-    <div class="button-group">
-        <%= link_to "Edit", edit_user_path(@user), class: "button" %>
-        <%= render partial: "pages/logout_button" %>
-    </div>
-
-    <div class="card">
-        <h3>Your Resource Ratings</h3>
-        <% @ratings.each do |rating| %>
-            <div class="cell">
-                <%= link_to rating.resource_name, resource_path(rating.resource) %> - <%= rating.rating %>
+    <div class="grid-x grid-margin-x small-up-2">
+        <div class="cell">
+            <div class="card account">
+                <h5>Name: <%= @user.first_name %> <%= @user.last_name %></h5>
+                <h5>Email: <%= @user.email %></h5>
+                <br>
+                <div class="button-group">
+                    <%= link_to "Edit", edit_user_path(@user), class: "button" %>
+                    <%= render partial: "pages/logout_button" %>
+                </div>
             </div>
-        <% end %>
+            <div class="card">
+                <h3>Your Resource Ratings</h3>
+                <% @ratings.each do |rating| %>
+                    <div class="cell">
+                        <%= link_to rating.resource_name, resource_path(rating.resource) %> - <%= rating.rating %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <div class="cell">
+                <%= image_tag "thom-milkovic-FTNGfpYCpGM-unsplash", alt: "Photo of a person typing on an antique typewriter." %>
+        </div>
     </div>
-
-</div>

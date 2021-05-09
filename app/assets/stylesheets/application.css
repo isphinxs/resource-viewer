@@ -19,7 +19,7 @@ body {
     color: #190E4F;
 }
 
-h1, h3, h3 a, .top-bar a {
+h1, h3, h3 a, .top-bar a, .account h5 {
     font-family: 'Nanum Myeongjo', serif;
 }
 
