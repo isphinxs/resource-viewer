@@ -25,8 +25,12 @@ class SessionsController < ApplicationController
       u.username = user_info["info"]["email"]
       u.password = SecureRandom.hex(10)
     end
-    session[:user_id] = user.id
-    redirect_to root_path
+    if user.valid?
+      session[:user_id] = user.id
+      redirect_to root_path
+    else
+      redirect_to signup_path, alert: "Hmm, please try signing up again."
+    end
   end
 
   def destroy
