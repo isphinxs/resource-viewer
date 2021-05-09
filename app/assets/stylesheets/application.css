@@ -52,6 +52,11 @@ ul {
     background-color: #E63462;
 }
 
+.callout.warning {
+    background-color: #F8FBEF;
+    border-color: #E63462;
+}
+
 .log-in-form {
     border: 1px solid lightgrey;
     padding: 1rem;
