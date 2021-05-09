@@ -23,6 +23,7 @@
     <%= f.text_field :email %>
     <br>
     <%= f.submit "Update Account", class: "button" %>
+    <%= link_to "Cancel", :back, class: "button" %>
 <% end %>
 
 <%= form_with model: @user, method: "delete" do |f| %>
