@@ -30,7 +30,7 @@
             <p><%= resource.organization_name %></p>
             <%= f.hidden_field :organization_id %>
         <% else %>
-            <%= f.collection_select :organization_id, organizations, :id, :name, include_hidden: false %>
+            <%= f.collection_select :organization_id, organizations, :id, :name, prompt: true, include_hidden: false %>
             <br>
             <label for="resource_organization_name">New Organization</label>
             <%= f.fields_for :organization, resource.build_organization do |organization_fields| %>
