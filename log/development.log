@@ -63607,3 +63607,204 @@ Processing by PagesController#home as */*
 Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 3091)
 
 
+Started GET "/resources" for ::1 at 2021-05-09 19:52:42 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/resource.rb:13:in `block in <class:Resource>'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/helpers/resources_helper.rb:11:in `list_index'
+  Rendered resources/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 6156)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 8535)
+Completed 200 OK in 59ms (Views: 29.3ms | ActiveRecord: 3.7ms | Allocations: 14043)
+
+
+Started GET "/js/vendor/jquery.js" for ::1 at 2021-05-09 19:52:43 -0400
+Processing by PagesController#route_not_found as JS
+  Parameters: {"unmatched"=>"js/vendor/jquery"}
+Started GET "/js/vendor/what-input.js" for ::1 at 2021-05-09 19:52:43 -0400
+Started GET "/js/vendor/foundation.min.js" for ::1 at 2021-05-09 19:52:43 -0400
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 534)
+
+
+Processing by PagesController#route_not_found as JS
+  Parameters: {"unmatched"=>"js/vendor/what-input"}
+Redirected to http://localhost:3000/
+Processing by PagesController#route_not_found as JS
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 730)
+
+
+  Parameters: {"unmatched"=>"js/vendor/foundation.min"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:43 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 3.7ms | Allocations: 171)
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.9ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 2713)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.7ms | Allocations: 3107)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:43 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 0.6ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2698)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 3091)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:43 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 0.5ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2698)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 3091)
+
+
+Started GET "/resources/6" for ::1 at 2021-05-09 19:52:45 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:71:in `set_resource'
+  [1m[36mRating Load (1.5ms)[0m  [1m[34mSELECT resource_id, avg(rating) as avg_rating FROM "ratings" WHERE (resource_id = 6) ORDER BY "ratings"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/resource.rb:16:in `rating'
+  Rendering layout layouts/application.html.erb
+  Rendering resources/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/resource.rb:33:in `organization_name'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "resource_categories" ON "categories"."id" = "resource_categories"."category_id" WHERE "resource_categories"."resource_id" = ?[0m  [["resource_id", 6]]
+  ↳ app/views/resources/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "ratings" ON "users"."id" = "ratings"."user_id" WHERE "ratings"."resource_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["resource_id", 6], ["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/ratings_helper.rb:3:in `user_rating_or_form'
+  Rendered ratings/_form.html.erb (Duration: 19.9ms | Allocations: 3298)
+  Rendered resources/show.html.erb within layouts/application (Duration: 549.4ms | Allocations: 248821)
+  Rendered layout layouts/application.html.erb (Duration: 552.8ms | Allocations: 250550)
+Completed 200 OK in 578ms (Views: 549.2ms | ActiveRecord: 7.3ms | Allocations: 256613)
+
+
+Started GET "/resources/js/vendor/jquery.js" for ::1 at 2021-05-09 19:52:45 -0400
+Processing by PagesController#route_not_found as JS
+  Parameters: {"unmatched"=>"resources/js/vendor/jquery"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 248)
+
+
+Started GET "/resources/js/vendor/foundation.min.js" for ::1 at 2021-05-09 19:52:45 -0400
+Started GET "/resources/js/vendor/what-input.js" for ::1 at 2021-05-09 19:52:45 -0400
+Processing by PagesController#route_not_found as JS
+  Parameters: {"unmatched"=>"resources/js/vendor/foundation.min"}
+Redirected to http://localhost:3000/
+Processing by PagesController#route_not_found as JS
+  Parameters: {"unmatched"=>"resources/js/vendor/what-input"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 248)
+
+
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms | Allocations: 1499)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:45 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 1.0ms | Allocations: 171)
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.7ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 2727)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms | Allocations: 3123)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:45 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 0.9ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2698)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 3091)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:45 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 1.5ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.4ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2698)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 3091)
+
+
+Started GET "/resources" for ::1 at 2021-05-09 19:52:47 -0400
+Processing by ResourcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering resources/index.html.erb within layouts/application
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" ORDER BY name[0m
+  ↳ app/helpers/resources_helper.rb:11:in `list_index'
+  Rendered resources/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1369)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3712)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 4166)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:47 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 0.6ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.5ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2693)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 3078)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:47 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 1.4ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 2693)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 3078)
+
+
+Started GET "/" for ::1 at 2021-05-09 19:52:47 -0400
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:7:in `current_user'
+  Rendered pages/_logout_button.html.erb (Duration: 0.8ms | Allocations: 168)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.7ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 2693)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 3078)
+
+
