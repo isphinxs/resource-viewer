@@ -1,4 +1,6 @@
 class RatingsController < ApplicationController
+    before_action :require_login
+    
     def create
         rating = Rating.new(user_id: current_user.id, resource_id: params[:resource_id], rating: params[:rating])
         if rating.valid?
